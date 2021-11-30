@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        content="width=device-width, initial-scale=1.0">
   <title>Каталог интернет-магазина "Мишка"</title>
 </head>
 <body>
 <header class="page-header">
-  <a href="#" class="page-header__logo">
+  <a href="index.html" class="page-header__logo">
     <img src="img/mishka-logo-mobile.svg" height="35" width="86" alt="Логотип Мишка">
   </a>
   <button class="page-header__toggle" type="button">
@@ -17,10 +17,10 @@
   <nav class="page-header__nav site-nav" aria-label="Main">
     <ul class="site-nav__list">
       <li class="site-nav__item">
-        <a href="#" class="site-nav__link">Каталог товаров</a>
+        <a href="catalog.html" class="site-nav__link">Каталог товаров</a>
       </li>
       <li class="site-nav__item">
-        <a href="#" class="site-nav__link">Вязание на заказ</a>
+        <a href="form.html" class="site-nav__link">Вязание на заказ</a>
       </li>
     </ul>
   </nav>
@@ -38,7 +38,8 @@
 <main class="page-main">
   <h1 class="page-main__title">Каталог товаров</h1>
   <section class="catalog">
-    <div class="catalog__item product-card">
+    <h2 class="visually-hidden">Каталог</h2>
+    <article class="catalog__item product-card">
       <img class="product-card__image" src="img/catalog-item-rabbit.jpg" alt="Зайчик-попрыгайчик" width="260" height="195">
       <div class="product-card__info">
         <h3 class="product-card__title">Зайчик-попрыгайчик</h3>
@@ -46,12 +47,12 @@
       </div>
       <div class="product-card__price">
         <p>1 200 руб.</p>
-        <svg class="main-header__icon" width="20" height="19">
+        <svg class="product-card__icon" width="20" height="19">
           <use xlink:href="img/catalog-cart.svg"></use>
         </svg>
       </div>
-    </div>
-    <div class="catalog__item product-card">
+    </article>
+    <article class="catalog__item product-card">
       <img class="product-card__image" src="img/catalog-item-basket.jpg" alt="Корзинка для белья" width="260" height="195">
       <div class="product-card__info">
         <h3 class="product-card__title">Корзинка для белья</h3>
@@ -59,12 +60,12 @@
       </div>
       <div class="product-card__price">
         <p>690 руб.</p>
-        <svg class="main-header__icon" width="20" height="19">
+        <svg class="product-card__icon" width="20" height="19">
           <use xlink:href="img/catalog-cart.svg"></use>
         </svg>
       </div>
-    </div>
-    <div class="catalog__item product-card">
+    </article>
+    <article class="catalog__item product-card">
       <img class="product-card__image" src="img/catalog-item-bigbasket.jpg" alt="Большая корзинка для игрушек" width="260" height="195">
       <div class="product-card__info">
         <h3 class="product-card__title">Большая корзинка<br>для игрушек</h3>
@@ -72,18 +73,18 @@
       </div>
       <div class="product-card__price">
         <p>1 500 руб.</p>
-        <svg class="main-header__icon" width="20" height="19">
+        <svg class="product-card__icon" width="20" height="19">
           <use xlink:href="img/catalog-cart.svg"></use>
         </svg>
       </div>
-    </div>
+    </article>
   </section>
   <section class="video">
     <h2 class="video__title">Процесс производства</h2>
-    <svg class="category__icon" width="32" height="22">
+    <svg class="video__icon" width="32" height="22">
       <use xlink:href="img/sprite.svg#camera-logo"></use>
     </svg>
-    <img src="img/video-preview.jpg" alt="Видео производства" width="260" height="150">
+    <img class="video__image" src="img/video-preview.jpg" alt="Видео производства" width="260" height="150">
     <p class="video__content">
       По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
     </p>
@@ -91,7 +92,7 @@
   </section>
 </main>
 <footer class="page-footer">
-  <a href="#" class="page-footer__logo">
+  <a href="index.html" class="page-footer__logo">
     <svg class="page-footer__icon" width="86" height="35">
       <use xlink:href="img/sprite.svg#mishka-logo-mobile"></use>
     </svg>
@@ -117,7 +118,7 @@
   </div>
   <div class="page-footer__copyright">
     <p>Разработано</p>
-    <svg class="category__icon" width="27" height="35">
+    <svg class="page-footer__copyright-icon" width="27" height="35">
       <use xlink:href="img/sprite.svg#htmlacademy-logo"></use>
     </svg>
   </div>
