@@ -1,1 +1,47 @@
-// Начните писать стили здесь
+// Global
+
+@import "global/global";
+@import "global/variables";
+@import "global/fonts";
+
+// Components
+
+// Общие компоненты
+
+@import "components/common/button";
+@import "components/common/page-main";
+@import "components/common/visually-hidden";
+
+// Компоненты header
+
+@import "components/header/page-header";
+@import "components/header/site-nav";
+@import "components/header/user-nav";
+
+// Компоненты index.html
+
+@import "components/main-index/main-header";
+@import "components/main-index/featured";
+@import "components/main-index/about";
+@import "components/main-index/review";
+@import "components/main-index/contacts";
+
+// Компоненты catalog.html
+
+@import "components/main-catalog/catalog";
+@import "components/main-catalog/product-card";
+@import "components/main-catalog/video";
+
+// Компоненты form.html
+
+@import "components/main-form/order";
+@import "components/main-form/control";
+@import "components/main-form/form-order";
+@import "components/main-form/filter-id";
+@import "components/main-form/filter-contact";
+@import "components/main-form/filter-additional";
+
+// Компоненты footer
+
+@import "components/footer/page-footer";
+@import "components/footer/social";

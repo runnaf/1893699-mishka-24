@@ -1,0 +1,19 @@
+@import "variables";
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Opensans", sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 400;
+  color: $text-content;
+}
+
+img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
