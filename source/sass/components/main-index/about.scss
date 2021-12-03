@@ -1,0 +1,33 @@
+.about__wrapper {
+  padding: 30px;
+}
+
+.about__title {
+  margin: 0;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 700;
+  color: $text-title;
+}
+
+.about__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.about__text {
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 700;
+  color: $text-title;
+  margin: 0;
+}
+
+.about__item {
+  display: flex;
+  align-items: end;
+  min-height: 120px;
+}

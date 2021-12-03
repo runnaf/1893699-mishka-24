@@ -1,0 +1,41 @@
+.featured__wrapper {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.featured__title {
+  margin: 0;
+  padding: 0;
+  font-size: 27px;
+  line-height: 30px;
+  font-weight: 700;
+  color: $text-title;
+  text-align: left;
+}
+
+.featured__subtitle {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: left;
+  margin: 0;
+  color: $main-green;
+}
+
+.featured__text {
+  font-size: 15px;
+  line-height: 24px;
+  margin: 0;
+}
+
+.featured__description {
+  line-height: 20px;
+}
+
+.featured__price {
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 700;
+  justify-self: center;
+}

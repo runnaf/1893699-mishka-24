@@ -5,6 +5,8 @@ html {
 }
 
 body {
+  min-height: 100%;
+  margin: 0;
   font-family: "Opensans", sans-serif;
   font-size: 15px;
   line-height: 30px;
@@ -16,4 +18,3 @@ img {
   max-width: 100%;
   object-fit: contain;
 }
-
