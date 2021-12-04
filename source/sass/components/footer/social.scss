@@ -1,0 +1,18 @@
+.social__list {
+  margin: 0;
+  padding: 20px 0 20px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  gap: 25px;
+}
+
+.social__item {
+  //  Пока не подключил изображения соц.сетей отобразил кругами
+  width: 40px;
+  height: 40px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 1px solid $main-green;
+}

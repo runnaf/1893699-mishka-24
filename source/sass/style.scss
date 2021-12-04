@@ -1,5 +1,5 @@
 // Global
-
+//
 @import "global/global";
 @import "global/variables";
 @import "global/fonts";
@@ -8,8 +8,8 @@
 
 // Общие компоненты
 
-@import "components/common/button";
 @import "components/common/page-main";
+@import "components/common/button";
 @import "components/common/visually-hidden";
 
 // Компоненты header

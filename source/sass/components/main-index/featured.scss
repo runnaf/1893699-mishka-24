@@ -1,7 +1,22 @@
+.featured {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 6px;
+    background-image: url("/img/zigzag-line-desktop.svg");
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
 .featured__wrapper {
   padding: 30px;
   display: grid;
   grid-template-columns: 1fr;
+  box-sizing: border-box;
 }
 
 .featured__title {
@@ -29,11 +44,18 @@
   margin: 0;
 }
 
+.featured__image {
+  align-self: center;
+  width: 100%;
+}
+
 .featured__description {
+  margin: 0;
   line-height: 20px;
 }
 
 .featured__price {
+  margin: 0;
   font-size: 17px;
   line-height: 24px;
   font-weight: 700;
