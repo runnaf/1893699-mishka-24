@@ -12,6 +12,8 @@
   font-weight: 700;
   background-color: $main-background;
   outline: none;
+  margin: 0;
+  padding: 0;
 
   &:focus {
     border-color: $dark-green;

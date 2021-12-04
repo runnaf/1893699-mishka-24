@@ -1,0 +1,19 @@
+.filter-contact__label {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-contact__input {
+  margin: 0;
+  padding: 0;
+  display: block;
+  font-size: 17px;
+  line-height: 50px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid $text-title;
+}
+
+.filter-contact__title {
+  margin: 0;
+}

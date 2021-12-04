@@ -1,0 +1,12 @@
+.order {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 30px 30px 30px;
+  gap: 30px;
+}
+
+.order__text {
+  font-size: 13px;
+  line-height: 24px;
+  margin: 0;
+}

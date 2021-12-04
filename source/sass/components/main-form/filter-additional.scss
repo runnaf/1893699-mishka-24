@@ -1,0 +1,16 @@
+.filter-additional {
+  gap: 22px;
+}
+
+.filter-additional__label {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-additional__input {
+  min-height: 160px;
+  padding: 17px;
+  border: 2px solid $text-content;
+  font-size: 17px;
+  line-height: 18px;
+}
