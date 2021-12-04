@@ -34,11 +34,13 @@
 .review__author {
   font-size: 17px;
   line-height: 24px;
+
   &-name {
     margin: 0;
     font-weight: 700;
     color: $text-title;
   }
+
   &-email {
     margin: 0;
   }
@@ -48,11 +50,11 @@
   display: flex;
 }
 
-.review__previous, .review__next {
+.review__previous,
+.review__next {
   border: 1px solid $border-color;
 }
 
 .review__next {
   border-left: none;
 }
-

@@ -3,3 +3,13 @@
   display: flex;
   flex-direction: column;
 }
+
+.page-main__title {
+  margin: 0;
+  background-color: $border-color;
+  font-size: 27px;
+  line-height: 30px;
+  padding: 75px 0 75px 0;
+  color: $text-title;
+  text-align: center;
+}
