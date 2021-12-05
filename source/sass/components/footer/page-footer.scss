@@ -1,0 +1,38 @@
+.page-footer {
+  position: relative;
+  background-color: $border-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  //  полоса между разделами футера
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    height: 1px;
+    background-color: $footer-border;
+    left: 30px;
+    right: 30px;
+  }
+}
+
+.page-footer__logo {
+  display: none;
+}
+
+.page-footer__copyright {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+  padding: 22px 0 22px 0;
+  flex-wrap: wrap;
+}
+
+.page-footer__copyright-text {
+  margin: 0;
+  font-size: 19px;
+  line-height: 24px;
+  color: $text-title;
+  font-weight: 700;
+}

@@ -1,0 +1,31 @@
+.button {
+  width: 100%;
+  min-height: 52px;
+  border: 2px solid $text-content;
+  color: $text-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: $main-background;
+  outline: none;
+  margin: 0;
+  padding: 0;
+
+  &:focus {
+    border-color: $dark-green;
+  }
+
+  &:hover {
+    background-color: $text-content;
+    color: $main-background;
+  }
+
+  &:active {
+    background-color: $text-content;
+    color: transparentize($main-background, 0.3);
+  }
+}

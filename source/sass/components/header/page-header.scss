@@ -1,0 +1,31 @@
+.page-header {
+  background-color: $main-background;
+  padding: 0 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  box-sizing: border-box;
+}
+
+.page-header__toggle {
+  position: absolute;
+  right: 30px;
+  top: 40px;
+  transform: translateY(-50%);
+  border: none;
+  width: 40px;
+  height: 40px;
+  background: url("/img/header-menu-close.svg") $main-background no-repeat 50% 50%;
+}
+
+.page-header__nav {
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.page-header__logo {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -2,8 +2,8 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
   <title>Каталог интернет-магазина "Мишка"</title>
 </head>
 <body>
@@ -40,39 +40,45 @@
   <section class="catalog">
     <h2 class="visually-hidden">Каталог</h2>
     <article class="catalog__item product-card">
-      <img class="product-card__image" src="img/catalog-item-rabbit.jpg" alt="Зайчик-попрыгайчик" width="260" height="195">
+      <a class="product-card__link" href="#">
+        <img class="product-card__image" src="img/catalog-item-rabbit.jpg" alt="Зайчик-попрыгайчик" width="260" height="195">
+      </a>
       <div class="product-card__info">
-        <h3 class="product-card__title">Зайчик-попрыгайчик</h3>
+        <a class="product-card__title" href="#">Зайчик-попрыгайчик</a>
         <p class="product-card__text">Рост 30 см, вес 200 г</p>
       </div>
       <div class="product-card__price">
-        <p>1 200 руб.</p>
+        1 200 руб.
         <svg class="product-card__icon" width="20" height="19">
           <use xlink:href="img/catalog-cart.svg"></use>
         </svg>
       </div>
     </article>
     <article class="catalog__item product-card">
-      <img class="product-card__image" src="img/catalog-item-basket.jpg" alt="Корзинка для белья" width="260" height="195">
+      <a class="product-card__link" href="#">
+        <img class="product-card__image" src="img/catalog-item-basket.jpg" alt="Корзинка для белья" width="260" height="195">
+      </a>
       <div class="product-card__info">
-        <h3 class="product-card__title">Корзинка для белья</h3>
+        <a class="product-card__title" href="#">Корзинка для белья</a>
         <p class="product-card__text">Диаметр 15 см, высота 10 см</p>
       </div>
       <div class="product-card__price">
-        <p>690 руб.</p>
+        690 руб.
         <svg class="product-card__icon" width="20" height="19">
           <use xlink:href="img/catalog-cart.svg"></use>
         </svg>
       </div>
     </article>
     <article class="catalog__item product-card">
-      <img class="product-card__image" src="img/catalog-item-bigbasket.jpg" alt="Большая корзинка для игрушек" width="260" height="195">
+      <a class="product-card__link" href="#">
+        <img class="product-card__image" src="img/catalog-item-bigbasket.jpg" alt="Большая корзинка для игрушек" width="260" height="195">
+      </a>
       <div class="product-card__info">
-        <h3 class="product-card__title">Большая корзинка<br>для игрушек</h3>
+        <a class="product-card__title" href="#">Большая корзинка<br>для игрушек</a>
         <p class="product-card__text">Диаметр 30 см, высота 30 см</p>
       </div>
       <div class="product-card__price">
-        <p>1 500 руб.</p>
+        1 500 руб.
         <svg class="product-card__icon" width="20" height="19">
           <use xlink:href="img/catalog-cart.svg"></use>
         </svg>
@@ -117,7 +123,7 @@
     </ul>
   </div>
   <div class="page-footer__copyright">
-    <p>Разработано</p>
+    <p class="page-footer__copyright-text">Разработано</p>
     <svg class="page-footer__copyright-icon" width="27" height="35">
       <use xlink:href="img/sprite.svg#htmlacademy-logo"></use>
     </svg>

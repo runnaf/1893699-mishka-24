@@ -1,0 +1,23 @@
+.filter-id {
+  gap: 22px;
+}
+
+.filter-id__label {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-id__text {
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 700;
+  color: $text-title;
+}
+
+.filter-id__input {
+  font-size: 17px;
+  line-height: 50px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid $text-title;
+}

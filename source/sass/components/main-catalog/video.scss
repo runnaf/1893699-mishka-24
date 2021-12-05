@@ -1,0 +1,48 @@
+.video {
+  padding: 30px 0;
+  margin: 0 30px 60px;
+  display: grid;
+  grid-template-columns: 30px 60px 1fr 30px;
+  grid-template-areas:
+    ". video__icon video__title ."
+    " video__image video__image video__image video__image"
+    ". video__content video__content ."
+    ". video__order video__order .";
+  row-gap: 15px;
+  border: 1px solid $border-color;
+}
+
+.video__title {
+  grid-area: video__title;
+  margin: 0;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 700;
+  color: $text-title;
+  justify-self: center;
+}
+
+.video__icon {
+  grid-area: video__icon;
+  display: block;
+  fill: $main-green;
+  align-self: center;
+}
+
+.video__image {
+  grid-area: video__image;
+  display: block;
+  justify-self: center;
+}
+
+.video__content {
+  grid-area: video__content;
+  margin: 0;
+  font-size: 13px;
+  line-height: 24px;
+  justify-self: center;
+}
+
+.video__order {
+  grid-area: video__order;
+}

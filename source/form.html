@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
   <title>Вязание на заказ в интернет-магазине "Мишка"</title>
 </head>
 <body>
@@ -110,29 +111,37 @@
 
       <fieldset class="form-order__filter-group filter-id">
         <legend class="form-order__filter-title">ФИО</legend>
-        <label class="filter-id__label">
-          <span class="filter-id__text">Имя:</span>
-          <input class="filter-id__input" type="text" name="user-name" placeholder="Введите ваше имя*" required>
-        </label>
-        <label class="filter-id__label">
-          <span class="filter-id__text">Фамилия:</span>
-          <input class="filter-id__input" type="text" name="user-surname" placeholder="Укажите фамилию*" required>
-        </label>
-        <label class="filter-id__label">
-          <span class="filter-id__text">Отчество:</span>
-          <input class="filter-id__input" type="text" name="user-middle-name" placeholder="Отчество, если желаете">
-        </label>
+        <ul class="form-order__filter-list">
+          <li class="form-order__filter-item">
+            <label class="filter-id__label">
+              <span class="filter-id__text">Имя:</span>
+              <input class="filter-id__input" type="text" name="user-name" placeholder="Введите ваше имя*" required>
+            </label>
+          </li>
+          <li class="form-order__filter-item">
+            <label class="filter-id__label">
+              <span class="filter-id__text">Фамилия:</span>
+              <input class="filter-id__input" type="text" name="user-surname" placeholder="Укажите фамилию*" required>
+            </label>
+          </li>
+          <li class="form-order__filter-item">
+            <label class="filter-id__label">
+              <span class="filter-id__text">Отчество:</span>
+              <input class="filter-id__input" type="text" name="user-middle-name" placeholder="Отчество, если желаете">
+            </label>
+          </li>
+        </ul>
       </fieldset>
 
       <fieldset class="form-order__filter-group filter-contact">
-        <legend class="form-order__filter-title">ТЕЛ</legend>
+        <legend class="form-order__filter-title filter-contact__title">ТЕЛ</legend>
         <label class="filter-contact__label">
           <input class="filter-contact__input" type="tel" name="user-tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
         </label>
       </fieldset>
 
       <fieldset class="form-order__filter-group filter-contact">
-        <legend class="form-order__filter-title">E-mail</legend>
+        <legend class="form-order__filter-title filter-contact__title">E-mail</legend>
         <label class="filter-contact__label">
           <input class="filter-contact__input" type="email" name="user-email" placeholder="Ваш Email*" required>
         </label>
@@ -175,7 +184,7 @@
     </ul>
   </div>
   <div class="page-footer__copyright">
-    <p>Разработано</p>
+    <p class="page-footer__copyright-text">Разработано</p>
     <svg class="page-footer__copyright-icon" width="27" height="35">
       <use xlink:href="img/sprite.svg#htmlacademy-logo"></use>
     </svg>

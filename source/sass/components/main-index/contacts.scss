@@ -1,0 +1,50 @@
+.contacts {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 30px;
+  margin-bottom: 40px;
+}
+
+.contacts__wrapper {
+  padding: 30px 30px 0 30px;
+  box-sizing: border-box;
+}
+
+.contacts__title {
+  margin: 0;
+  padding: 0;
+  font-size: 27px;
+  line-height: 30px;
+  font-weight: 700;
+  color: $text-title;
+  text-align: left;
+}
+
+.contacts__text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  font-style: normal;
+}
+
+.contacts__email {
+  display: inline-block;
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  font-style: normal;
+  color: $text-content;
+  text-decoration: none;
+  border-bottom: 1px solid $main-green;
+}
+
+.contacts__map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contacts__feedback {
+  width: calc(100% - 60px);
+  margin: 0 auto;
+}
