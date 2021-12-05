@@ -34,16 +34,10 @@
 .review__author {
   font-size: 17px;
   line-height: 24px;
+}
 
-  &-name {
-    margin: 0;
-    font-weight: 700;
-    color: $text-title;
-  }
-
-  &-email {
-    margin: 0;
-  }
+.review__author-email {
+  margin: 0;
 }
 
 .review__controls {
