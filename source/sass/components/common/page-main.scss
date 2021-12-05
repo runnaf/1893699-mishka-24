@@ -2,6 +2,12 @@
   position: relative;
   display: flex;
   flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    z-index: 2;
+    top: -$header-second-string;
+  }
 }
 
 .page-main__title {

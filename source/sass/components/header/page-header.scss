@@ -4,6 +4,37 @@
   display: grid;
   grid-template-columns: 1fr;
   box-sizing: border-box;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 50px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr $header-second-string;
+    grid-auto-flow: column;
+    grid-template-areas:
+      "header-logo user-nav"
+      "site-nav delivery-info";
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 150px 1fr;
+    grid-template-rows: 1fr $header-second-string;
+    grid-template-areas:
+      "site-nav header-logo user-nav"
+      "sale-info . delivery-info";
+  }
+
+  &::before {
+    @media (min-width: $tablet-width) {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 46px;
+      height: 1px;
+      background-color: $border-color;
+    }
+  }
 }
 
 .page-header__toggle {
@@ -15,6 +46,10 @@
   width: 40px;
   height: 40px;
   background: url("/img/header-menu-close.svg") $main-background no-repeat 50% 50%;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .page-header__nav {
@@ -28,4 +63,52 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: $tablet-width) {
+    grid-area: header-logo;
+    align-self: center;
+    justify-self: start;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-self: center;
+  }
+}
+
+.page-header__delivery-info {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    grid-area: delivery-info;
+    align-self: center;
+    justify-self: end;
+    z-index: 3;
+  }
+}
+
+.page-header__sale-list {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    z-index: 3;
+    grid-area: sale-info;
+    display: flex;
+    align-self: center;
+    justify-self: start;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 45px;
+  }
+}
+
+.page-header__sale-link {
+  @media (min-width: $desktop-width) {
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 700;
+    color: $text-title;
+    text-decoration: none;
+  }
 }

@@ -12,7 +12,7 @@
     <img src="img/mishka-logo-mobile.svg" height="35" width="86" alt="Логотип Мишка">
   </a>
   <button class="page-header__toggle" type="button">
-    <span class="visually-hidden">Открыть меню</span>
+    <!--    <span class="visually-hidden">Открыть меню</span>-->
   </button>
   <nav class="page-header__nav site-nav" aria-label="Main">
     <ul class="site-nav__list">
@@ -27,13 +27,23 @@
   <nav class="page-header__nav user-nav">
     <ul class="user-nav__list">
       <li class="user-nav__item">
-        <a href="#" class="user-nav__link">Поиск по сайту</a>
+        <a href="#" class="user-nav__link user-nav__search">
+          <span class="user-nav__mobile-text">Поиск по сайту</span></a>
       </li>
       <li class="user-nav__item">
-        <a href="#" class="user-nav__link">Корзина: пока пуста</a>
+        <a href="#" class="user-nav__link user-nav__cart">Корзина: пока пуста</a>
       </li>
     </ul>
   </nav>
+  <div class="page-header__delivery-info">Бесплатная доставка по России</div>
+  <ul class="page-header__sale-list">
+    <li>
+      <a class="page-header__sale-link" href="#">Новые поступления</a>
+    </li>
+    <li>
+      <a class="page-header__sale-link" href="#">Распродажа</a>
+    </li>
+  </ul>
 </header>
 <main class="page-main">
   <h1 class="page-main__title">Каталог товаров</h1>
