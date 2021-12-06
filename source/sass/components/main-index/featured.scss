@@ -15,8 +15,30 @@
 .featured__wrapper {
   padding: 30px;
   display: grid;
-  grid-template-columns: 1fr;
   box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    padding: 40px 50px 30px 50px;
+    grid-template-columns: 2fr 1fr 1fr;
+    row-gap: 35px;
+    grid-template-areas:
+      "f-title f-title f-subtitle"
+      "f-text f-image f-image"
+      "f-description f-image f-image"
+      "f-price f-image f-image"
+      "f-button f-image f-image";
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 60px 50px 75px 50px;
+    grid-template-columns: 1fr 2fr 1fr 2fr;
+    grid-template-areas:
+      "f-subtitle f-title f-image f-image"
+      ". f-text f-image f-image"
+      ". f-description f-image f-image"
+      ". f-price f-image f-image"
+      ". f-button f-image f-image";
+  }
 }
 
 .featured__title {
@@ -27,6 +49,21 @@
   font-weight: 700;
   color: $text-title;
   text-align: left;
+
+  @media (min-width: $tablet-width) {
+    grid-area: f-title;
+    font-size: 43px;
+    line-height: 50px;
+    align-self: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 2 / 4;
+    z-index: 3;
+    font-size: 53px;
+    line-height: 57px;
+    align-self: center;
+  }
 }
 
 .featured__subtitle {
@@ -36,22 +73,65 @@
   text-align: left;
   margin: 0;
   color: $main-green;
+
+  @media (min-width: $tablet-width) {
+    grid-area: f-subtitle;
+    text-align: center;
+    max-width: 120px;
+    justify-self: end;
+    align-self: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-self: center;
+  }
 }
 
 .featured__text {
   font-size: 15px;
   line-height: 24px;
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    grid-area: f-text;
+    font-size: 17px;
+    line-height: 30px;
+    margin-right: 40px;
+  }
 }
 
 .featured__image {
   align-self: center;
-  width: 100%;
+  max-width: 100%;
+
+  @media (min-width: $tablet-width) {
+    grid-area: f-image;
+    width: auto;
+    height: 100%;
+  }
 }
 
 .featured__description {
   margin: 0;
   line-height: 20px;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+
+  @media (min-width: $tablet-width) {
+    grid-area: f-description;
+    margin-right: 40px;
+  }
+}
+
+.featured__definition,
+.featured__term {
+  line-height: 40px;
+  border-bottom: 1px solid $border-color;
+  margin: 0;
+}
+
+.featured__definition {
+  padding-left: 30px;
 }
 
 .featured__price {
@@ -60,4 +140,19 @@
   line-height: 24px;
   font-weight: 700;
   justify-self: center;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 40px;
+    grid-area: f-price;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.featured__button {
+  @media (min-width: $tablet-width) {
+    grid-area: f-button;
+    width: auto;
+    margin: 0 40px 0 0;
+  }
 }
