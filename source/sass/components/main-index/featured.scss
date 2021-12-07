@@ -1,14 +1,21 @@
 .featured {
   position: relative;
+  margin-bottom: 55px;
 
   &::after {
     content: "";
     position: absolute;
     height: 6px;
-    background-image: url("/img/zigzag-line-desktop.svg");
+    background: url("/img/zigzag-line-desktop.svg") repeat-x;
     bottom: 0;
     left: 0;
     right: 0;
+
+    @media (min-width: $tablet-width) {
+      bottom: -50px;
+      height: 17px;
+      background-size: contain;
+    }
   }
 }
 

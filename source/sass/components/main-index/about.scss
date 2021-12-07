@@ -2,8 +2,8 @@
   padding: 30px;
   box-sizing: border-box;
 
-  @media (min-width: $tablet-width) {
-    padding: 30px 50px;
+  @media (min-width: $desktop-width) {
+    padding: 50px;
   }
 
   @media (min-width: $desktop-width) {
@@ -25,7 +25,9 @@
   }
 
   @media (min-width: $desktop-width) {
-    grid-column: 2;
+    grid-column: 2/3;
+    font-size: 53px;
+    line-height: 57px;
   }
 }
 
@@ -42,7 +44,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    grid-column: 2;
+    grid-column: 2/3;
   }
 }
 
