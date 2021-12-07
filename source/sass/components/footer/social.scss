@@ -6,6 +6,11 @@
   flex-wrap: wrap;
   list-style-type: none;
   gap: 25px;
+
+  @media (min-width: $tablet-width) {
+    gap: 40px;
+    padding: 0;
+  }
 }
 
 .social__item {

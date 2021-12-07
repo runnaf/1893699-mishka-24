@@ -2,18 +2,43 @@
   position: relative;
   padding: 30px;
   display: grid;
-  grid-template-columns: 1fr;
   row-gap: 30px;
   box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    padding: 50px;
+    row-gap: 40px;
+    margin-bottom: 130px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "r-title r-title . r-new"
+      "r-text r-text r-text r-text"
+      "r-author r-author . r-controls";
+    background: url("/img/review-background-tablet.png") left no-repeat;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas:
+      ". r-title r-title . . r-new"
+      ". r-text r-text r-text r-text r-text"
+      ". r-author r-author . . r-controls";
+  }
 
   &::after {
     content: "";
     position: absolute;
     height: 6px;
-    background-image: url("/img/zigzag-line-desktop.svg");
+    background: url("/img/zigzag-line-desktop.svg") repeat-x;
     bottom: 0;
     left: 0;
     right: 0;
+
+    @media (min-width: $tablet-width) {
+      bottom: -50px;
+      height: 17px;
+      background-size: contain;
+    }
   }
 }
 
@@ -23,31 +48,63 @@
   line-height: 30px;
   font-weight: 700;
   color: $text-title;
+
+  @media (min-width: $tablet-width) {
+    grid-area: r-title;
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .review__text {
   margin: 0;
   font-size: 15px;
   line-height: 30px;
+
+  @media (min-width: $tablet-width) {
+    grid-area: r-text;
+    font-size: 17px;
+  }
 }
 
 .review__author {
   font-size: 17px;
   line-height: 24px;
+  margin: 0;
+  color: $text-title;
 
-  &-name {
-    margin: 0;
+  @media (min-width: $tablet-width) {
+    grid-area: r-author;
+  }
+}
+
+.review__author-name {
+  margin: 0;
+  font-weight: 700;
+  margin-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    grid-area: r-author;
     font-weight: 700;
-    color: $text-title;
   }
+}
 
-  &-email {
-    margin: 0;
-  }
+.review__author-email {
+  margin: 0;
+  font-weight: 400;
 }
 
 .review__controls {
   display: flex;
+
+  @media (min-width: $tablet-width) {
+    grid-area: r-controls;
+  }
 }
 
 .review__previous,
@@ -57,4 +114,10 @@
 
 .review__next {
   border-left: none;
+}
+
+.review__create-new {
+  @media (min-width: $tablet-width) {
+    grid-area: r-new;
+  }
 }
