@@ -11,10 +11,10 @@
   <a href="index.html" class="page-header__logo">
     <img src="img/mishka-logo-mobile.svg" height="35" width="86" alt="Логотип Мишка">
   </a>
-  <button class="page-header__toggle" type="button">
-    <!--    <span class="visually-hidden">Открыть меню</span>-->
+  <button class="page-header__toggle page-header__toggle--nojs" type="button">
+    <span class="visually-hidden">Открыть меню</span>
   </button>
-  <nav class="page-header__nav site-nav" aria-label="Main">
+  <nav class="page-header__nav site-nav page-header__nav--nojs" aria-label="Main">
     <ul class="site-nav__list">
       <li class="site-nav__item">
         <a href="catalog.html" class="site-nav__link">Каталог товаров</a>
@@ -24,7 +24,7 @@
       </li>
     </ul>
   </nav>
-  <nav class="page-header__nav user-nav">
+  <nav class="page-header__nav user-nav page-header__nav--nojs">
     <ul class="user-nav__list">
       <li class="user-nav__item">
         <a href="#" class="user-nav__link user-nav__link--search">
@@ -200,5 +200,46 @@
     </svg>
   </div>
 </footer>
+
+<script>
+  var navSite = document.querySelector('.site-nav');
+  var navUser = document.querySelector('.user-nav');
+  var navToggle = document.querySelector('.page-header__toggle');
+
+  navSite.classList.remove('page-header__nav--nojs');
+  navUser.classList.remove('page-header__nav--nojs');
+  navToggle.classList.remove('page-header__toggle--nojs');
+
+  navSite.classList.add('page-header__nav--closed');
+  navUser.classList.add('page-header__nav--closed');
+  navToggle.classList.add('page-header__toggle--closed');
+
+  navToggle.addEventListener('click', function () {
+    if (navSite.classList.contains('page-header__nav--closed')) {
+      navSite.classList.remove('page-header__nav--closed');
+      navSite.classList.add('page-header__nav--open');
+    } else {
+      navSite.classList.add('page-header__nav--closed');
+      navSite.classList.remove('page-header__nav--open');
+
+    }
+    if (navUser.classList.contains('page-header__nav--closed')) {
+      navUser.classList.remove('page-header__nav--closed');
+      navUser.classList.add('page-header__nav--open');
+    } else {
+      navUser.classList.add('page-header__nav--closed');
+      navUser.classList.remove('page-header__nav--open');
+    }
+
+    if (navToggle.classList.contains('page-header__toggle--closed')) {
+      navToggle.classList.remove('page-header__toggle--closed');
+      navToggle.classList.add('page-header__toggle--open');
+    } else {
+      navToggle.classList.add('page-header__toggle--closed');
+      navToggle.classList.remove('page-header__toggle--open');
+    }
+  });
+</script>
+
 </body>
 </html>
