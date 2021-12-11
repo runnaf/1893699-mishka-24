@@ -1,25 +1,51 @@
 .form-order {
   display: grid;
-  grid-template-columns: 1fr;
   row-gap: 30px;
 }
 
 .form-order__filter-group {
+  position: relative;
+  display: flex;
   border: none;
   margin: 0;
   padding: 0;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 60px;
+    right: 0;
+    top: -40px;
+    height: 1px;
+    background-color: $main-green;
+    z-index: 1;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
 }
 
 .form-order__filter-title {
+  z-index: 2;
+  background-color: $main-background;
+  display: block;
+  position: relative;
   margin: 0 0 25px 0;
-  padding: 0;
+  padding: 0 10px 0 0;
   font-size: 17px;
   text-transform: uppercase;
   font-weight: 700;
   color: $main-green;
+
 }
 
 .form-order__filter-list {
+  width: 100%;
   margin: 0;
   padding: 0;
   display: flex;
