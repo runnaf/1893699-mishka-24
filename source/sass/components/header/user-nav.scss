@@ -60,6 +60,13 @@
   @media (min-width: $tablet-width) {
     padding-left: 75px;
   }
+
+  .&--search {
+    @media (min-width: $tablet-width) {
+      width: 80px;
+      box-sizing: border-box;
+    }
+  }
 }
 
 .user-nav__mobile-text {
@@ -74,12 +81,5 @@
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
-  }
-}
-
-.user-nav__search {
-  @media (min-width: $tablet-width) {
-    width: 80px;
-    box-sizing: border-box;
   }
 }
