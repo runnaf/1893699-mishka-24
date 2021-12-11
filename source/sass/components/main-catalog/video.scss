@@ -64,10 +64,10 @@
   display: block;
   fill: $main-green;
   align-self: center;
+
   @media (min-width: $desktop-width) {
     padding-top: 47px;
   }
-
 }
 
 .video__image {
@@ -95,11 +95,11 @@
 
 .video__order {
   grid-area: video__order;
+
   @media (min-width: $desktop-width) {
     justify-self: center;
     align-self: center;
     width: auto;
     padding: 0 30px;
   }
-
 }

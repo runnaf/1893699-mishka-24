@@ -26,14 +26,13 @@
 }
 
 .control__input {
-
   &[type="radio"] + .control__mark {
     border-radius: 50%;
     width: 42px;
     height: 42px;
   }
 
-  &[type="checkbox"]:checked + .control__mark:before {
+  &[type="checkbox"]:checked + .control__mark::before {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -44,7 +43,7 @@
     transform: translate(-50%, -50%);
   }
 
-  &[type="radio"]:checked + .control__mark:before {
+  &[type="radio"]:checked + .control__mark::before {
     position: absolute;
     top: 50%;
     left: 50%;

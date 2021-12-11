@@ -21,6 +21,9 @@
 }
 
 .product-card__link {
+  display: block;
+  cursor: pointer;
+
   @media (min-width: $tablet-width) {
     grid-area: pc-image;
   }
@@ -33,7 +36,6 @@
   background-size: cover;
   width: 100%;
   height: auto;
-
 }
 
 .product-card__info {
@@ -94,9 +96,4 @@
     grid-area: pc-price;
     font-size: 17px;
   }
-}
-
-.product-card__link {
-  display: block;
-  cursor: pointer;
 }

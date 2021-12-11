@@ -1,5 +1,9 @@
 .filter-additional {
   gap: 22px;
+
+  @media (min-width: $tablet-width) {
+    gap: 0;
+  }
 }
 
 .filter-additional__label {

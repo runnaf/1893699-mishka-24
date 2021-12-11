@@ -1,17 +1,26 @@
 .form-order {
   display: grid;
   row-gap: 30px;
+  grid-template-columns: 1fr;
+}
+
+.form-order__wrapper {
+  width: max-content;
 }
 
 .form-order__filter-group {
   position: relative;
-  display: flex;
+  display: grid;
   border: none;
   margin: 0;
   padding: 0;
 
   @media (min-width: $tablet-width) {
-    flex-direction: row;
+    grid-template-columns: 1fr 3fr;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 4fr 1fr;
   }
 
   &::before {
@@ -19,7 +28,7 @@
     content: "";
     left: 60px;
     right: 0;
-    top: -40px;
+    top: 16px;
     height: 1px;
     background-color: $main-green;
     z-index: 1;
@@ -41,7 +50,6 @@
   text-transform: uppercase;
   font-weight: 700;
   color: $main-green;
-
 }
 
 .form-order__filter-list {
@@ -52,10 +60,48 @@
   flex-direction: column;
   gap: 25px;
   list-style-type: none;
+
+  &--checkbox {
+    @media (min-width: $tablet-width) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+.form-order__footer-wrapper {
+  display: grid;
+  gap: 30px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "f-button f-info";
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-areas: ". f-button f-info .";
+    gap: 0;
+  }
 }
 
 .form-order__info {
   margin: 0;
   font-size: 14px;
   line-height: 16px;
+
+  @media (min-width: $tablet-width) {
+    grid-area: f-info;
+    justify-self: right;
+    align-self: center;
+  }
+}
+
+.form-order__submit {
+  @media (min-width: $tablet-width) {
+    grid-area: f-button;
+    width: auto;
+    justify-self: left;
+    padding: 0 30px;
+  }
 }
