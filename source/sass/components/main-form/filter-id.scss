@@ -1,6 +1,10 @@
 .filter-id__label {
   display: flex;
   flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+  }
 }
 
 .filter-id__text {
@@ -8,6 +12,12 @@
   line-height: 18px;
   font-weight: 700;
   color: $text-title;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 24px;
+    justify-self: center;
+    align-self: center;
+  }
 }
 
 .filter-id__input {
@@ -16,4 +26,8 @@
   outline: none;
   border: none;
   border-bottom: 2px solid $text-title;
+
+  @media (min-width: $tablet-width) {
+    flex-grow: 1;
+  }
 }

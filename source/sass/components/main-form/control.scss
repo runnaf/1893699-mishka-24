@@ -1,10 +1,57 @@
 .control {
   display: flex;
+  position: relative;
+  align-self: center;
+  min-height: 38px;
 }
 
 .control__label {
+  align-self: center;
+  margin-left: 60px;
   font-size: 17px;
   line-height: 18px;
   font-weight: 700;
   color: $text-title;
+}
+
+.control__mark {
+  position: absolute;
+  top: 50%;
+  left: 1px;
+  box-sizing: border-box;
+  width: 38px;
+  height: 38px;
+  border: 2px solid $text-content;
+  transform: translateY(-50%);
+}
+
+.control__input {
+  &[type="radio"] + .control__mark {
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+  }
+
+  &[type="checkbox"]:checked + .control__mark::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 24px;
+    height: 17px;
+    background-image: url("./../img/control-check.svg");
+    content: "";
+    transform: translate(-50%, -50%);
+  }
+
+  &[type="radio"]:checked + .control__mark::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: $main-green;
+    content: "";
+    transform: translate(-50%, -50%);
+  }
 }

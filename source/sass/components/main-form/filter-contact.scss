@@ -1,6 +1,7 @@
 .filter-contact__label {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .filter-contact__input {
@@ -12,8 +13,4 @@
   outline: none;
   border: none;
   border-bottom: 2px solid $text-title;
-}
-
-.filter-contact__title {
-  margin: 0;
 }

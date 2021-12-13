@@ -1,17 +1,60 @@
 .product-card {
+  width: 100%;
   display: grid;
-  grid-template-columns: 1fr;
   outline: 1px solid $border-color;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr max-content;
+    grid-template-areas:
+      "pc-image pc-info"
+      "pc-image pc-price";
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "pc-image"
+      "pc-info"
+      "pc-price";
+  }
+}
+
+.product-card__link {
+  display: block;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    grid-area: pc-image;
+  }
 }
 
 .product-card__image {
   display: block;
   align-self: center;
   margin: 0;
+  background-size: cover;
+  width: 100%;
+  height: auto;
 }
 
 .product-card__info {
   padding: 28px 28px 17px 28px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 28px;
+    right: 28px;
+    bottom: 0;
+    height: 1px;
+    background-color: $border-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-area: pc-info;
+  }
 }
 
 .product-card__title {
@@ -22,12 +65,22 @@
   font-weight: 700;
   text-decoration: none;
   cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 .product-card__text {
   font-size: 13px;
   line-height: 30px;
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 15px;
+    line-height: 30px;
+  }
 }
 
 .product-card__price {
@@ -38,9 +91,9 @@
   color: $text-title;
   font-weight: 700;
   background: url("/img/catalog-cart.svg") no-repeat calc(100% - 28px) 50%;
-}
 
-.product-card__link {
-  display: block;
-  cursor: pointer;
+  @media (min-width: $tablet-width) {
+    grid-area: pc-price;
+    font-size: 17px;
+  }
 }

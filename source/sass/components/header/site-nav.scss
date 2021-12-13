@@ -21,6 +21,7 @@
 }
 
 .site-nav__item {
+  position: relative;
   min-height: 80px;
   display: flex;
   justify-content: start;
@@ -34,12 +35,27 @@
   @media (min-width: $desktop-width) {
     padding-right: 35px;
   }
-}
 
-.site-nav__item:nth-child(2) {
-  @media (min-width: $desktop-width) {
-    padding-left: 35px;
-    border-left: 1px solid $border-color;
+  &:nth-child(2) {
+    @media (min-width: $desktop-width) {
+      padding-left: 35px;
+      border-left: 1px solid $border-color;
+    }
+  }
+
+  //  линии в мобильной версии
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -110px;
+    right: -30px;
+    height: 1px;
+    background-color: $border-color;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
   }
 }
 
