@@ -1,9 +1,8 @@
-.contacts {
+.contacts__wrapper {
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 30px;
-  margin-bottom: 40px;
-  padding: 30px 30px 0 30px;
+  padding: 0 30px;
   box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
@@ -12,6 +11,9 @@
   }
 
   @media (min-width: $desktop-width) {
+    padding: 0;
+    margin: 0 auto;
+    max-width: $desktop-page-width;
     grid-template-columns: 1fr 2fr 3fr;
     grid-template-areas:
       ". c-title  c-map"
@@ -110,20 +112,20 @@
 }
 
 .contacts__map {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  border: none;
+  display: block;
   margin-left: -30px;
-  margin-right: -30px;
+  width: calc(100% + 60px);
 
   @media (min-width: $tablet-width) {
     margin-left: -50px;
-    margin-right: -50px;
+    width: calc(100% + 100px);
   }
 
   @media (min-width: $desktop-width) {
     grid-area: c-map;
     margin: 0;
+    width: 100%;
   }
 }
 

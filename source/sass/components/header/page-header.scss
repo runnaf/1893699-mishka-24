@@ -1,29 +1,7 @@
 .page-header {
+  position: relative;
   min-height: $header-nav;
   background-color: $main-background;
-  padding: 0 30px;
-  display: grid;
-  grid-template-columns: 1fr;
-  box-sizing: border-box;
-  position: relative;
-
-  @media (min-width: $tablet-width) {
-    padding: 0 50px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr $header-second-string;
-    grid-auto-flow: column;
-    grid-template-areas:
-      "header-logo user-nav"
-      "site-nav delivery-info";
-  }
-
-  @media (min-width: $desktop-width) {
-    grid-template-columns: 1fr 150px 1fr;
-    grid-template-rows: 1fr $header-second-string;
-    grid-template-areas:
-      "site-nav header-logo user-nav"
-      "sale-info . delivery-info";
-  }
 
   &::before {
     content: "";
@@ -37,6 +15,33 @@
     @media (min-width: $tablet-width) {
       bottom: 46px;
     }
+  }
+}
+
+.page-header__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 50px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr $header-second-string;
+    grid-auto-flow: column;
+    grid-template-areas:
+      "header-logo user-nav"
+      "site-nav delivery-info";
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: $desktop-page-width;
+    padding: 0;
+    margin: 0 auto;
+    grid-template-columns: 1fr 150px 1fr;
+    grid-template-rows: 1fr $header-second-string;
+    grid-template-areas:
+      "site-nav header-logo user-nav"
+      "sale-info . delivery-info";
   }
 }
 
