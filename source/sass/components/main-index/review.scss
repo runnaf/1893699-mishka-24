@@ -13,7 +13,7 @@
       "r-title r-title . r-new"
       "r-text r-text r-text r-text"
       "r-author r-author . r-controls";
-    background: url("/img/review-background-tablet.png") left no-repeat;
+    background: url("./../img/review-background-tablet.png") left no-repeat;
   }
 
   @media (min-width: $desktop-width) {
@@ -31,7 +31,7 @@
     content: "";
     position: absolute;
     height: 6px;
-    background: url("/img/zigzag-line-desktop.svg") repeat-x;
+    background: url("./../img/zigzag-line-desktop.svg") repeat-x;
     bottom: -51px;
     left: 0;
     right: 0;
