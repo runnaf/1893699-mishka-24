@@ -1,23 +1,25 @@
-.review {
+.review__wrapper {
   position: relative;
-  padding: 30px;
+  padding: 0 30px;
   display: grid;
   row-gap: 30px;
   box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
-    padding: 50px;
+    padding: 82px 50px 47px;
     row-gap: 40px;
-    margin-bottom: 130px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas:
       "r-title r-title . r-new"
       "r-text r-text r-text r-text"
       "r-author r-author . r-controls";
-    background: url("/img/review-background-tablet.png") left no-repeat;
+    background: url("./../img/review-background-tablet.png") left no-repeat;
   }
 
   @media (min-width: $desktop-width) {
+    padding: 78px 0 96px;
+    margin: 0 auto;
+    max-width: $desktop-page-width;
     grid-template-columns: repeat(6, 1fr);
     grid-template-areas:
       ". r-title r-title . . r-new"
@@ -29,15 +31,20 @@
     content: "";
     position: absolute;
     height: 6px;
-    background: url("/img/zigzag-line-desktop.svg") repeat-x;
-    bottom: 0;
+    background: url("./../img/zigzag-line-desktop.svg") repeat-x;
+    bottom: -51px;
     left: 0;
     right: 0;
 
     @media (min-width: $tablet-width) {
-      bottom: -50px;
+      bottom: -85px;
       height: 17px;
       background-size: contain;
+    }
+
+    @media (min-width: $desktop-width) {
+      height: 23px;
+      bottom: -90px;
     }
   }
 }

@@ -8,47 +8,49 @@
 </head>
 <body>
 <header class="page-header">
-  <a href="index.html" class="page-header__logo">
-    <img src="img/mishka-logo-mobile.svg" height="35" width="86" alt="Логотип Мишка">
-  </a>
-  <button class="page-header__toggle page-header__toggle--nojs" type="button">
-    <span class="visually-hidden">Открыть меню</span>
-  </button>
-  <nav class="page-header__nav site-nav page-header__nav--nojs" aria-label="Main">
-    <ul class="site-nav__list">
-      <li class="site-nav__item">
-        <a href="catalog.html" class="site-nav__link">Каталог товаров</a>
+  <div class="page-header__wrapper">
+    <a href="index.html" class="page-header__logo">
+      <img src="img/mishka-logo-mobile.svg" height="35" width="86" alt="Логотип Мишка">
+    </a>
+    <button class="page-header__toggle page-header__toggle--nojs" type="button">
+      <span class="visually-hidden">Открыть меню</span>
+    </button>
+    <nav class="page-header__nav site-nav page-header__nav--nojs" aria-label="Main">
+      <ul class="site-nav__list">
+        <li class="site-nav__item">
+          <a href="catalog.html" class="site-nav__link">Каталог товаров</a>
+        </li>
+        <li class="site-nav__item">
+          <a href="form.html" class="site-nav__link">Вязание на заказ</a>
+        </li>
+      </ul>
+    </nav>
+    <nav class="page-header__nav user-nav page-header__nav--nojs">
+      <ul class="user-nav__list">
+        <li class="user-nav__item">
+          <a href="#" class="user-nav__link user-nav__link--search">
+            <span class="user-nav__mobile-text">Поиск по сайту</span></a>
+        </li>
+        <li class="user-nav__item">
+          <a href="#" class="user-nav__link user-nav__link--cart">Корзина: пока пуста</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="page-header__delivery-info">Бесплатная доставка по России</div>
+    <ul class="page-header__sale-list">
+      <li>
+        <a class="page-header__sale-link" href="#">Новые поступления</a>
       </li>
-      <li class="site-nav__item">
-        <a href="form.html" class="site-nav__link">Вязание на заказ</a>
+      <li>
+        <a class="page-header__sale-link" href="#">Распродажа</a>
       </li>
     </ul>
-  </nav>
-  <nav class="page-header__nav user-nav page-header__nav--nojs">
-    <ul class="user-nav__list">
-      <li class="user-nav__item">
-        <a href="#" class="user-nav__link user-nav__link--search">
-          <span class="user-nav__mobile-text">Поиск по сайту</span></a>
-      </li>
-      <li class="user-nav__item">
-        <a href="#" class="user-nav__link user-nav__link--cart">Корзина: пока пуста</a>
-      </li>
-    </ul>
-  </nav>
-  <div class="page-header__delivery-info">Бесплатная доставка по России</div>
-  <ul class="page-header__sale-list">
-    <li>
-      <a class="page-header__sale-link" href="#">Новые поступления</a>
-    </li>
-    <li>
-      <a class="page-header__sale-link" href="#">Распродажа</a>
-    </li>
-  </ul>
+  </div>
 </header>
-<main class="page-main">
+<main class="main">
   <h1 class="visually-hidden">Магазин детских игрушек и предметов интерьера "Мишка"</h1>
-  <section class="main-header">
-    <h2 class="main-header__title">Милые штуки ручной работы для дома</h2>
+  <section class="main-header main__main-header">
+    <h2 class="main-header__title">Милые штуки<br>ручной<br class="main-header__title--break"> работы для дома</h2>
     <div class="main-header__wrapper">
       <div class="main-header__item">
         <a href="#" class="main-header__link">
@@ -68,7 +70,7 @@
       </div>
     </div>
   </section>
-  <section class="featured">
+  <section class="featured main__featured">
     <div class="featured__wrapper">
       <h2 class="featured__title">Вязаные корзинки</h2>
       <p class="featured__subtitle">ТОВАР НЕДЕЛИ</p>
@@ -88,138 +90,105 @@
       <button class="button featured__button" type="button">ЗАКАЗАТЬ</button>
     </div>
   </section>
-  <section class="about">
-    <h2 class="about__title">Коротко о нас:</h2>
-    <ul class="about__list">
-      <li class="about__item about-icon-eco">
-        <p class="about__text">Экологически<br>чистые материалы</p>
-      </li>
-      <li class="about__item about-icon-style">
-        <p class="about__text">Скандинавский стиль<br>по российской цене</p>
-      </li>
-      <li class="about__item about-icon-like">
-        <p class="about__text">Увеличивает лайки<br>на фотографиях</p>
-      </li>
-      <li class="about__item about-icon-knit">
-        <p class="about__text">Связано вручную<br>с любовью и умилением</p>
-      </li>
-      <li class="about__item about-icon-rocket">
-        <p class="about__text">Поддержка отечественного<br>производителя</p>
-      </li>
-      <li class="about__item about-icon-package">
-        <p class="about__text">Поставляется<br>в подарочной упаковке</p>
-      </li>
-    </ul>
+  <section class="about main__about">
+    <div class="about__wrapper">
+      <h2 class="about__title">Коротко о нас:</h2>
+      <ul class="about__list">
+        <li class="about__item about-icon-eco">
+          <p class="about__text">Экологически<br>чистые материалы</p>
+        </li>
+        <li class="about__item about-icon-style">
+          <p class="about__text">Скандинавский стиль<br>по российской цене</p>
+        </li>
+        <li class="about__item about-icon-like">
+          <p class="about__text">Увеличивает лайки<br>на фотографиях</p>
+        </li>
+        <li class="about__item about-icon-knit">
+          <p class="about__text">Связано вручную<br>с любовью и умилением</p>
+        </li>
+        <li class="about__item about-icon-rocket">
+          <p class="about__text">Поддержка отечественного<br>производителя</p>
+        </li>
+        <li class="about__item about-icon-package">
+          <p class="about__text">Поставляется<br>в подарочной упаковке</p>
+        </li>
+      </ul>
+    </div>
   </section>
-  <section class="review">
-    <h2 class="review__title">Отзывы</h2>
-    <p class="review__text">
-      Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как
-      у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке,
-      и мои фотографии сразу стали более стильными, а также набирают больше лайков!
-    </p>
-    <div class="review__author">
-      <p class="review__author-name">Анастасия Красильникова</p>
-      <p class="review__author-email">@misssssiskras</p>
-    </div>
-    <div class="review__controls">
-      <button class="review__previous button" type="button">
-        <span class="visually-hidden">Предыдущий отзыв</span>
+  <section class="review main__review">
+    <div class="review__wrapper">
+      <h2 class="review__title">Отзывы</h2>
+      <p class="review__text">
+        Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как
+        у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке,
+        и мои фотографии сразу стали более стильными, а также набирают больше лайков!
+      </p>
+      <div class="review__author">
+        <p class="review__author-name">Анастасия Красильникова</p>
+        <p class="review__author-email">@misssssiskras</p>
+      </div>
+      <div class="review__controls">
+        <button class="review__previous button" type="button">
+          <span class="visually-hidden">Предыдущий отзыв</span>
+        </button>
+        <button class="review__next button" type="button">
+          <span class="visually-hidden">Следующий отзыв</span>
+        </button>
+      </div>
+      <button class="review__create-new button" type="button">
+        Написать
       </button>
-      <button class="review__next button" type="button">
-        <span class="visually-hidden">Следующий отзыв</span>
-      </button>
     </div>
-    <button class="review__create-new button" type="button">
-      Написать
-    </button>
   </section>
-  <section class="contacts">
-    <h2 class="contacts__title">Контакты</h2>
-    <address class="contacts__address">
-      <p class="contacts__text">email:</p>
-      <a class="contacts__email" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
-      <p class="contacts__text">адрес:</p>
-      <p class="contacts__text">Санкт-Петербург<br>ул. Большая Конюшенная<br>д. 19/8, офис 101</p>
-    </address>
-    <div class="contacts__map">
-      <img class="contacts__map-image" src="img/map-mobile.jpg" width="320" height="455" alt="Как нас найти">
+  <section class="contacts main__contacts">
+    <div class="contacts__wrapper">
+      <h2 class="contacts__title">Контакты</h2>
+      <address class="contacts__address">
+        <p class="contacts__text">email:</p>
+        <a class="contacts__email" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+        <p class="contacts__text">адрес:</p>
+        <p class="contacts__text">Санкт-Петербург<br>ул. Большая Конюшенная<br>д. 19/8, офис 101</p>
+      </address>
+      <iframe class="contacts__map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003015!2d30.320858715991513!3d59.93871916905433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1639593212867!5m2!1sru!2sru" width="320" height="455" allowfullscreen="" loading="lazy" title="Как нас найти"></iframe>
+      <button class="contacts__feedback button" type="button">Напишите нам</button>
     </div>
-    <button class="contacts__feedback button" type="button">Напишите нам</button>
   </section>
 </main>
 <footer class="page-footer">
-  <a class="page-footer__logo" href="index.html">
-    <svg class="page-footer__icon" width="86" height="35">
-      <use xlink:href="img/sprite.svg#mishka-logo-mobile"></use>
-    </svg>
-  </a>
-  <div class="page-footer__social social">
-    <ul class="social__list">
-      <li class="social__item">
-        <a class="social__link social__link--instagram" href="#">
-          <span class="visually-hidden">Мы в Инстаграме</span>
-        </a>
-      </li>
-      <li class="social__item">
-        <a class="social__link social__link--facebook" href="#">
-          <span class="visually-hidden">Мы в Фейсбуке</span>
-        </a>
-      </li>
-      <li class="social__item">
-        <a class="social__link social__link--twitter" href="#">
-          <span class="visually-hidden">Мы в Твиттере</span>
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div class="page-footer__copyright">
-    <p class="page-footer__copyright-text">Разработано</p>
-    <svg class="page-footer__copyright-icon" width="27" height="35">
-      <use xlink:href="img/sprite.svg#htmlacademy-logo"></use>
-    </svg>
+  <div class="page-footer__wrapper">
+    <a class="page-footer__logo" href="index.html">
+      <svg class="page-footer__icon" width="86" height="35">
+        <use xlink:href="img/sprite.svg#mishka-logo-mobile"></use>
+      </svg>
+    </a>
+    <div class="page-footer__social social">
+      <ul class="social__list">
+        <li class="social__item">
+          <a class="social__link social__link--instagram" href="#">
+            <span class="visually-hidden">Мы в Инстаграме</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--facebook" href="#">
+            <span class="visually-hidden">Мы в Фейсбуке</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--twitter" href="#">
+            <span class="visually-hidden">Мы в Твиттере</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="page-footer__copyright">
+      <p class="page-footer__copyright-text">Разработано</p>
+      <svg class="page-footer__copyright-icon" width="27" height="35">
+        <use xlink:href="img/sprite.svg#htmlacademy-logo"></use>
+      </svg>
+    </div>
   </div>
 </footer>
-
-<script>
-  var navSite = document.querySelector('.site-nav');
-  var navUser = document.querySelector('.user-nav');
-  var navToggle = document.querySelector('.page-header__toggle');
-
-  navSite.classList.remove('page-header__nav--nojs');
-  navUser.classList.remove('page-header__nav--nojs');
-  navToggle.classList.remove('page-header__toggle--nojs');
-
-  navSite.classList.add('page-header__nav--closed');
-  navUser.classList.add('page-header__nav--closed');
-  navToggle.classList.add('page-header__toggle--closed');
-
-  navToggle.addEventListener('click', function () {
-    if (navSite.classList.contains('page-header__nav--closed')) {
-      navSite.classList.remove('page-header__nav--closed');
-      navSite.classList.add('page-header__nav--open');
-    } else {
-      navSite.classList.add('page-header__nav--closed');
-      navSite.classList.remove('page-header__nav--open');
-
-    }
-    if (navUser.classList.contains('page-header__nav--closed')) {
-      navUser.classList.remove('page-header__nav--closed');
-      navUser.classList.add('page-header__nav--open');
-    } else {
-      navUser.classList.add('page-header__nav--closed');
-      navUser.classList.remove('page-header__nav--open');
-    }
-
-    if (navToggle.classList.contains('page-header__toggle--closed')) {
-      navToggle.classList.remove('page-header__toggle--closed');
-      navToggle.classList.add('page-header__toggle--open');
-    } else {
-      navToggle.classList.add('page-header__toggle--closed');
-      navToggle.classList.remove('page-header__toggle--open');
-    }
-  });
-</script>
-
+<script src="./js/script.js"></script>
 </body>
 </html>
