@@ -17,6 +17,7 @@
 
   @media (min-width: $tablet-width) {
     display: flex;
+    flex-wrap: wrap;
   }
 }
 
@@ -36,7 +37,7 @@
     padding-right: 35px;
   }
 
-  &:nth-child(2) {
+  &:nth-child(even) {
     @media (min-width: $desktop-width) {
       padding-left: 35px;
       border-left: 1px solid $border-color;

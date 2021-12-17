@@ -6,7 +6,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: 79px;
+    bottom: 1px;
     left: 0;
     right: 0;
     height: 1px;
@@ -19,11 +19,16 @@
 }
 
 .page-header__wrapper {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 10;
   display: grid;
   grid-template-columns: 1fr;
   box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
+    position: relative;
     padding: 0 50px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr $header-second-string;
@@ -87,8 +92,8 @@
   }
 
   &--open.user-nav {
-    position: absolute;
-    bottom: -4 * $header-nav;
+    position: relative;
+    height: auto;
     z-index: 10;
     background-color: $main-background;
     width: 100%;
@@ -96,8 +101,8 @@
   }
 
   &--open.site-nav {
-    position: absolute;
-    bottom: -2 * $header-nav;
+    position: relative;
+    height: auto;
     z-index: 10;
     background-color: $main-background;
     width: 100%;

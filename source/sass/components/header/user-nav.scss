@@ -13,6 +13,7 @@
 
   @media (min-width: $tablet-width) {
     display: flex;
+    flex-wrap: wrap;
   }
 }
 
@@ -26,28 +27,22 @@
 
   @media (min-width: $tablet-width) {
     margin-left: 0;
+    border-left: 1px solid $border-color;
   }
+}
 
-  &:nth-child(1) {
-    @media (min-width: $tablet-width) {
-      border-left: 1px solid $border-color;
-      border-right: 1px solid $border-color;
-    }
-  }
+//  линии в мобильной версии
+&::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -110px;
+  right: -30px;
+  height: 1px;
+  background-color: $border-color;
 
-  //  линии в мобильной версии
-  &::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: -110px;
-    right: -30px;
-    height: 1px;
-    background-color: $border-color;
-
-    @media (min-width: $tablet-width) {
-      display: none;
-    }
+  @media (min-width: $tablet-width) {
+    display: none;
   }
 }
 
