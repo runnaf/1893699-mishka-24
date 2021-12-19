@@ -60,6 +60,7 @@
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  align-items: end;
 
   @media (min-width: $tablet-width) {
     position: absolute;
@@ -85,6 +86,14 @@
   @media (min-width: $tablet-width) {
     flex-grow: 1;
   }
+
+  &:hover {
+    height: 135px;
+  }
+
+  &:focus-within {
+    border: solid 2px $dark-green;
+  }
 }
 
 .main-header__item:last-child {
@@ -101,12 +110,26 @@
   font-size: 19px;
   line-height: 24px;
   font-weight: 700;
+  outline: none;
 
   @media (min-width: $tablet-width) {
     min-height: 130px;
+  }
+
+  &:hover {
+    height: 135px;
+  }
+
+  &:hover .main-header__icon {
+    opacity: 0.7;
+  }
+
+  &:active .main-header__icon {
+    opacity: 0.3;
   }
 }
 
 .main-header__icon {
   fill: $dark-green;
+  opacity: 0.5;
 }

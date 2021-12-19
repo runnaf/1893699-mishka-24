@@ -120,6 +120,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  outline: none;
 
   @media (min-width: $tablet-width) {
     grid-area: header-logo;
@@ -129,6 +130,18 @@
 
   @media (min-width: $desktop-width) {
     justify-self: center;
+  }
+
+  &--image:focus {
+    fill: $main-green;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -167,5 +180,18 @@
     font-weight: 700;
     color: $text-title;
     text-decoration: none;
+    outline: none;
+  }
+
+  &:focus {
+    color: $main-green;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

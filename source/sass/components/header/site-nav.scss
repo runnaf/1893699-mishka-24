@@ -64,6 +64,7 @@
   display: block;
   text-decoration: none;
   color: $text-title;
+  outline: none;
 
   @media (min-width: $tablet-width) {
     font-size: 15px;
@@ -76,5 +77,17 @@
   @media (min-width: $desktop-width) {
     font-size: 17px;
     margin-right: 0;
+  }
+
+  &:focus {
+    color: $main-green;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

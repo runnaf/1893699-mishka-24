@@ -18,8 +18,19 @@
   border: 2px solid $text-content;
   font-size: 17px;
   line-height: 18px;
+  outline: none;
 
   @media (min-width: $tablet-width) {
     font-size: 19px;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $main-green;
+  }
+
+  &:active {
+    border-color: $main-green;
+    color: $text-title;
   }
 }

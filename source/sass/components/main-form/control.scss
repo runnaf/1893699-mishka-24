@@ -58,4 +58,13 @@
     content: "";
     transform: translate(-50%, -50%);
   }
+
+  &:hover + .control__mark,
+  &:focus + .control__mark {
+    border-color: $main-green;
+  }
+
+  &:active + .control__mark {
+    border-color: fade-out($text-title, 0.7);
+  }
 }

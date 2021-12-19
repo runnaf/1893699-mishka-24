@@ -67,6 +67,7 @@
   color: $text-title;
   cursor: pointer;
   position: relative;
+  outline: none;
 
   @media (min-width: $tablet-width) {
     padding-left: 75px;
@@ -77,6 +78,18 @@
       width: 80px;
       box-sizing: border-box;
     }
+  }
+
+  &:focus {
+    color: $main-green;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
