@@ -1,12 +1,42 @@
 .order {
   display: flex;
   flex-direction: column;
-  padding: 20px 30px 30px 30px;
+  padding: 0;
   gap: 30px;
+
+  @media (min-width: $tablet-width) {
+    gap: 0;
+  }
 }
 
 .order__text {
   font-size: 13px;
   line-height: 24px;
   margin: 0;
+  text-align: left;
+
+  @media (min-width: $tablet-width) {
+    font-size: 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 2;
+  }
+}
+
+.order__wrapper {
+  display: grid;
+  margin: 0;
+  padding: 0 30px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-page-width;
+    grid-template-columns: 1fr 4fr 1fr;
+    padding: 0;
+    margin: 0 auto;
+  }
 }

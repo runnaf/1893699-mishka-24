@@ -13,6 +13,11 @@
       height: 24px;
       z-index: 3;
     }
+
+    @media (min-width: $desktop-width) {
+      height: 34px;
+      bottom: -17px;
+    }
   }
 }
 

@@ -5,6 +5,7 @@
 }
 
 .filter-contact__input {
+  background-color: inherit;
   margin: 0;
   padding: 0;
   display: block;
@@ -13,4 +14,12 @@
   outline: none;
   border: none;
   border-bottom: 2px solid $text-title;
+
+  @media (min-width: $tablet-width) {
+    font-size: 19px;
+  }
+}
+
+.filter-contact__title {
+  margin: 0;
 }

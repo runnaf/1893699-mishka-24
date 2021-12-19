@@ -1,16 +1,18 @@
-.catalog {
+.catalog__wrapper {
   display: grid;
-  padding: 30px;
+  padding: 0 30px;
   row-gap: 30px;
 
   @media (min-width: $tablet-width) {
+    padding: 0 50px;
     row-gap: 54px;
   }
 
   @media (min-width: $desktop-width) {
+    max-width: $desktop-page-width;
+    padding: 0;
+    margin: 0 auto;
     grid-template-columns: repeat(3, 1fr);
     gap: 52px;
-    margin: 57px 0;
-    padding: 0 50px;
   }
 }

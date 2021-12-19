@@ -1,31 +1,28 @@
-.video {
-  padding: 30px 0;
-  margin: 0 30px 60px;
+.video__wrapper {
+  padding: 0;
+  margin: 0;
   display: grid;
-  grid-template-columns: 30px 60px 1fr 30px;
+  grid-template-columns: 90px 1fr;
   grid-template-areas:
-    ". video__icon video__title ."
-    " video__image video__image video__image video__image"
-    ". video__content video__content ."
-    ". video__order video__order .";
-  row-gap: 15px;
+    "video__icon video__title"
+    "video__image video__image"
+    "video__content video__content"
+    "video__order video__order";
   border: 1px solid $border-color;
 
   @media (min-width: $tablet-width) {
-    grid-template-columns: 40px 60px 1fr 40px;
+    grid-template-columns: 110px 1fr;
     grid-template-areas:
-      " video__image video__image video__image video__image"
-      ". video__icon video__title ."
-      ". video__content video__content ."
-      ". video__order video__order .";
-    row-gap: 40px;
-    padding: 0 0 42px 0;
-    margin-bottom: 15px;
+      "video__image video__image"
+      "video__icon video__title"
+      "video__content video__content"
+      "video__order video__order";
+    row-gap: 25px;
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0 50px 60px;
-    padding: 0;
+    max-width: $desktop-page-width;
+    margin: 0 auto;
     //    "0" в среднем столбце чтобы выровнятся по сетке с каталогом сверху
     grid-template-columns: 2fr 0 1fr;
     grid-template-rows: min-content min-content min-content 1fr;
@@ -42,6 +39,7 @@
 .video__title {
   grid-area: video__title;
   margin: 0;
+  padding: 21px 0 26px;
   font-size: 17px;
   line-height: 24px;
   font-weight: 700;
@@ -49,10 +47,12 @@
   justify-self: center;
 
   @media (min-width: $tablet-width) {
+    padding: 0;
     font-size: 20px;
   }
 
   @media (min-width: $desktop-width) {
+    padding-left: 40px;
     width: 180px;
     align-self: start;
     justify-self: start;
@@ -64,6 +64,12 @@
   display: block;
   fill: $main-green;
   align-self: center;
+  justify-self: center;
+
+  @media (min-width: $tablet-width) {
+    justify-self: left;
+    padding-left: 40px;
+  }
 
   @media (min-width: $desktop-width) {
     padding-top: 47px;
@@ -77,29 +83,49 @@
   background-size: cover;
   width: 100%;
   height: auto;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
 .video__content {
   grid-area: video__content;
   margin: 0;
+  padding: 35px 32px 41px;
   font-size: 13px;
   line-height: 24px;
   justify-self: center;
 
   @media (min-width: $tablet-width) {
+    padding: 0 40px;
     font-size: 15px;
     line-height: 30px;
     justify-self: start;
+    margin-bottom: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 40px 0 40px;
   }
 }
 
 .video__order {
   grid-area: video__order;
+  margin: 0 34px 34px 34px;
+  width: auto;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 42px 46px 42px;
+  }
 
   @media (min-width: $desktop-width) {
     justify-self: center;
     align-self: center;
-    width: auto;
-    padding: 0 30px;
+    width: calc(100% - 80px);
   }
 }
