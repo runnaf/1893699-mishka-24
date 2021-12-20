@@ -35,11 +35,20 @@
   text-align: center;
   box-sizing: border-box;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("./../img/main-image-mobile@2x.jpg");
+  }
+
   @media (min-width: $tablet-width) {
+    background-image: url("./../img/main-image-desktop.jpg");
     padding-top: 155px;
     font-size: 43px;
     line-height: 50px;
     height: 625px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("./../img/main-image-desktop@2x.jpg");
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -82,21 +91,21 @@
   background-color: $main-green;
   padding: 0 30px;
   box-sizing: border-box;
+  width: 100%;
 
   @media (min-width: $tablet-width) {
     flex-grow: 1;
   }
 
-  &:hover {
-    height: 135px;
-  }
-
+  &:hover,
   &:focus-within {
-    border: solid 2px $dark-green;
+    @media (min-width: $tablet-width) {
+      height: 135px;
+    }
   }
 }
 
-.main-header__item:last-child {
+.main-header__item:nth-child(even) {
   background-color: $secondary-green;
 }
 
@@ -117,7 +126,9 @@
   }
 
   &:hover {
-    height: 135px;
+    @media (min-width: $tablet-width) {
+      height: 135px;
+    }
   }
 
   &:hover .main-header__icon {

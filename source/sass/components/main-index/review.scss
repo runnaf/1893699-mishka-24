@@ -14,6 +14,11 @@
       "r-text r-text r-text r-text"
       "r-author r-author . r-controls";
     background: url("./../img/review-background-tablet.png") left no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("./../img/review-background-tablet@2x.jpg");
+      background-size: 350px;
+    }
   }
 
   @media (min-width: $desktop-width) {

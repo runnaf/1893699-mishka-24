@@ -109,25 +109,29 @@
   margin: 0 0 28px 0;
 
   @media (min-width: $tablet-width) {
-    margin: 0;
+    margin: 0 40px 0 0;
     grid-area: f-text;
     font-size: 17px;
     line-height: 30px;
-    margin-right: 40px;
+  }
+}
+
+.featured__picture {
+  @media (min-width: $tablet-width) {
+    grid-area: f-image;
+    width: 100%;
+    background-size: cover;
   }
 }
 
 .featured__image {
   margin: 0 0 26px 0;
   display: block;
-  background-size: cover;
-  width: 100%;
   height: auto;
+  width: 100%;
 
   @media (min-width: $tablet-width) {
     margin: 0;
-    grid-area: f-image;
-    width: auto;
     height: 100%;
   }
 }
