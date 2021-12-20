@@ -13,6 +13,7 @@
 
   @media (min-width: $tablet-width) {
     display: flex;
+    flex-wrap: wrap;
   }
 }
 
@@ -26,13 +27,7 @@
 
   @media (min-width: $tablet-width) {
     margin-left: 0;
-  }
-
-  &:nth-child(1) {
-    @media (min-width: $tablet-width) {
-      border-left: 1px solid $border-color;
-      border-right: 1px solid $border-color;
-    }
+    border-left: 1px solid $border-color;
   }
 
   //  линии в мобильной версии
@@ -72,6 +67,7 @@
   color: $text-title;
   cursor: pointer;
   position: relative;
+  outline: none;
 
   @media (min-width: $tablet-width) {
     padding-left: 75px;
@@ -82,6 +78,18 @@
       width: 80px;
       box-sizing: border-box;
     }
+  }
+
+  &:focus {
+    color: $main-green;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 

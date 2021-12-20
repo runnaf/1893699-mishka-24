@@ -18,11 +18,21 @@
       "pc-info"
       "pc-price";
   }
+
+  &:hover,
+  &:focus-within {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .product-card__link {
   display: block;
   cursor: pointer;
+  outline: none;
 
   @media (min-width: $tablet-width) {
     grid-area: pc-image;
@@ -36,6 +46,7 @@
   background-size: cover;
   width: 100%;
   height: auto;
+  outline: none;
 }
 
 .product-card__info {
@@ -65,10 +76,19 @@
   font-weight: 700;
   text-decoration: none;
   cursor: pointer;
+  outline: none;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 24px;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -84,16 +104,39 @@
 }
 
 .product-card__price {
-  display: block;
+  display: flex;
   padding: 22px 28px 26px 28px;
   font-size: 15px;
   line-height: 24px;
+  justify-content: space-between;
+  align-items: center;
   color: $text-title;
   font-weight: 700;
-  background: url("/img/catalog-cart.svg") no-repeat calc(100% - 28px) 50%;
 
   @media (min-width: $tablet-width) {
     grid-area: pc-price;
     font-size: 17px;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:hover .product-card__icon {
+    fill: $main-green;
+    opacity: 1;
+  }
+}
+
+.product-card__icon {
+  opacity: 0.2;
+
+  &:active {
+    fill: $main-green;
+    opacity: 0.3;
   }
 }

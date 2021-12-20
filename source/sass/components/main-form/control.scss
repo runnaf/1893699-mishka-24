@@ -12,6 +12,10 @@
   line-height: 18px;
   font-weight: 700;
   color: $text-title;
+
+  @media (min-width: $tablet-width) {
+    font-size: 19px;
+  }
 }
 
 .control__mark {
@@ -53,5 +57,14 @@
     background-color: $main-green;
     content: "";
     transform: translate(-50%, -50%);
+  }
+
+  &:hover + .control__mark,
+  &:focus + .control__mark {
+    border-color: $main-green;
+  }
+
+  &:active + .control__mark {
+    border-color: fade-out($text-title, 0.7);
   }
 }

@@ -104,10 +104,22 @@
   color: $text-content;
   text-decoration: none;
   border-bottom: 1px solid $main-green;
+  outline: none;
 
   @media (min-width: $tablet-width) {
     font-size: 17px;
     line-height: 30px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $main-green;
+    border-color: $dark-green;
+  }
+
+  &:active {
+    border-color: fade-out($dark-green, 0.9);
+    color: $main-green;
   }
 }
 

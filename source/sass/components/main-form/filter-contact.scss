@@ -1,10 +1,59 @@
 .filter-contact__label {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
+
+  &--tel::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    right: 7px;
+    transform: translateY(-50%);
+    opacity: 0.2;
+    width: 25px;
+    height: 24px;
+    background-image: url("./../img/contact-phone.svg");
+
+    @media (min-width: $tablet-width) {
+      right: 26px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: 8px;
+    }
+  }
+
+  &--email::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    right: 3px;
+    transform: translateY(-50%);
+    opacity: 0.2;
+    width: 32px;
+    height: 21px;
+    background-image: url("./../img/contact-email.svg");
+
+    @media (min-width: $tablet-width) {
+      right: 22px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: 4px;
+    }
+  }
+
+  &:hover::before,
+  &:active::before {
+    filter: invert(73%) sepia(68%) saturate(267%) hue-rotate(116deg) brightness(88%) contrast(95%);
+    opacity: 1;
+  }
 }
 
 .filter-contact__input {
+  position: relative;
+  background-color: inherit;
   margin: 0;
   padding: 0;
   display: block;
@@ -13,4 +62,22 @@
   outline: none;
   border: none;
   border-bottom: 2px solid $text-title;
+
+  @media (min-width: $tablet-width) {
+    font-size: 19px;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $main-green;
+  }
+
+  &:active {
+    border-color: $main-green;
+    color: $text-title;
+  }
+}
+
+.filter-contact__title {
+  margin: 0;
 }

@@ -16,12 +16,14 @@
   padding: 0;
 
   &:focus {
-    border-color: $dark-green;
+    border-color: $main-green;
+    color: $main-green;
   }
 
   &:hover {
     background-color: $text-content;
     color: $main-background;
+    border-color: $text-content;
   }
 
   &:active {
