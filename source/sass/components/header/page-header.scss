@@ -96,8 +96,6 @@
     height: auto;
     z-index: 10;
     background-color: $main-background;
-    width: 100%;
-    padding: 0 30px;
   }
 
   &--open.site-nav {
@@ -105,8 +103,6 @@
     height: auto;
     z-index: 10;
     background-color: $main-background;
-    width: 100%;
-    padding: 0 30px;
   }
 
   &--nojs {

@@ -26,6 +26,7 @@
   align-items: center;
 
   @media (min-width: $tablet-width) {
+    min-height: 88px;
     margin-left: 0;
     border-left: 1px solid $border-color;
   }
@@ -35,8 +36,8 @@
     content: "";
     position: absolute;
     bottom: 0;
-    left: -110px;
-    right: -30px;
+    left: -80px;
+    right: 0;
     height: 1px;
     background-color: $border-color;
 
@@ -46,15 +47,13 @@
   }
 }
 
-.user-nav__link::before {
+.user-nav__icon {
   content: "";
   position: absolute;
   transform: translate(-50%, -50%);
-  width: 30px;
-  height: 30px;
-  border: 1px solid $border-color;
   left: -40px;
   top: 50%;
+  opacity: 0.2;
 
   @media (min-width: $tablet-width) {
     left: 40px;
@@ -85,11 +84,26 @@
   }
 
   &:hover {
-    opacity: 0.6;
+    color: fade-out($text-title, 0.4);
   }
 
   &:active {
+    color: fade-out($text-title, 0.7);
+  }
+
+  &:focus .user-nav__icon {
+    opacity: 1;
+    fill: $main-green;
+  }
+
+  &:hover .user-nav__icon {
+    opacity: 1;
+    fill: $main-green;
+  }
+
+  &:active .user-nav__icon {
     opacity: 0.3;
+    fill: $main-green;
   }
 }
 

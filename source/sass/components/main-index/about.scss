@@ -44,6 +44,8 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-auto-flow: column;
+    row-gap: 30px;
+    padding-top: 40px;
   }
 
   @media (min-width: $desktop-width) {
@@ -65,7 +67,15 @@
 }
 
 .about__item {
+  position: relative;
   display: flex;
   align-items: end;
-  min-height: 120px;
+  min-height: 124px;
+}
+
+svg.about__icon {
+  fill: $main-green;
+  position: absolute;
+  top: 22px;
+  left: -6px;
 }
