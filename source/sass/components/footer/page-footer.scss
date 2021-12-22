@@ -38,19 +38,34 @@
 
 .page-footer__logo {
   display: none;
+  outline: none;
 
   @media (min-width: $tablet-width) {
     display: flex;
     align-items: center;
+
+    &:focus .page-footer__icon {
+      fill: $main-green;
+    }
+
+    &:hover .page-footer__icon {
+      fill: $hover-green;
+    }
+
+    &:active .page-footer__icon {
+      opacity: 0.3;
+    }
   }
 }
 
 .page-footer__copyright {
+  text-decoration: none;
   display: flex;
   align-items: center;
   gap: 27px;
   padding: 22px 0 22px 0;
   flex-wrap: wrap;
+  outline: none;
 
   @media (min-width: $tablet-width) {
     padding: 0;
@@ -58,11 +73,27 @@
     align-self: center;
   }
 
-  .page-footer__copyright-text {
-    margin: 0;
-    font-size: 19px;
-    line-height: 24px;
-    color: $text-title;
-    font-weight: 700;
+  &:focus .page-footer__copyright-icon {
+    fill: $hover-green;
+  }
+}
+
+.page-footer__copyright-text {
+  margin: 0;
+  font-size: 19px;
+  line-height: 24px;
+  color: $text-title;
+  font-weight: 700;
+}
+
+.page-footer__copyright-icon {
+  fill: $main-green;
+
+  &:hover {
+    fill: $hover-green;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

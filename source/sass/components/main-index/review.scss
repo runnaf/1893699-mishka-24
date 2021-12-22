@@ -14,6 +14,11 @@
       "r-text r-text r-text r-text"
       "r-author r-author . r-controls";
     background: url("./../img/review-background-tablet.png") left no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("./../img/review-background-tablet@2x.jpg");
+      background-size: 350px;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -119,12 +124,39 @@
   border: 1px solid $border-color;
 }
 
-.review__next {
-  border-left: none;
-}
-
 .review__create-new {
   @media (min-width: $tablet-width) {
     grid-area: r-new;
+  }
+}
+
+.review__button {
+  &:focus {
+    border: 1px solid $main-green;
+  }
+
+  &:hover {
+    background-color: $main-background;
+    border-color: $border-color;
+  }
+
+  &:hover .review__icon {
+    opacity: 0.6;
+  }
+
+  &:active .review__icon {
+    opacity: 0.3;
+  }
+}
+
+.review__next {
+  border-left: none;
+
+  &:hover {
+    border-left: none;
+  }
+
+  &:active {
+    border-left: none;
   }
 }

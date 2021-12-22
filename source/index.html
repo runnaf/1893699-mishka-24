@@ -4,13 +4,32 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="img/favicon/favicon-32x32.svg">
+  <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="img/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="manifest.json">
   <title>Интернет-магазин "Мишка"</title>
 </head>
 <body>
 <header class="page-header">
   <div class="page-header__wrapper">
     <a href="index.html" class="page-header__logo">
-      <img class="page-header__logo--image" src="img/mishka-logo-mobile.svg" height="35" width="86" alt="Логотип Мишка">
+      <picture class="page-header__picture">
+        <source media="(min-width: 1150px)" srcset="img/mishka-logo-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/mishka-logo-tablet.svg">
+        <img class="page-header__image" src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип Мишка">
+      </picture>
     </a>
     <button class="page-header__toggle page-header__toggle--nojs" type="button">
       <span class="visually-hidden">Открыть меню</span>
@@ -29,10 +48,18 @@
       <ul class="user-nav__list">
         <li class="user-nav__item">
           <a href="#" class="user-nav__link user-nav__link--search">
+            <svg class="user-nav__icon" width="18" height="18" viewBox="0 0 18 18">
+              <use xlink:href="img/sprite.svg#header-search"></use>
+            </svg>
             <span class="user-nav__mobile-text">Поиск по сайту</span></a>
         </li>
         <li class="user-nav__item">
-          <a href="#" class="user-nav__link user-nav__link--cart">Корзина: пока пуста</a>
+          <a href="#" class="user-nav__link user-nav__link--cart">
+            <svg class="user-nav__icon" width="21" height="18" viewBox="0 0 21 18">
+              <use xlink:href="img/sprite.svg#cart"></use>
+            </svg>
+            Корзина: пока пуста
+          </a>
         </li>
       </ul>
     </nav>
@@ -55,7 +82,7 @@
       <div class="main-header__item">
         <a href="#" class="main-header__link">
           Предметы<br>интерьера
-          <svg class="main-header__icon" width="40" height="62">
+          <svg class="main-header__icon" width="40" height="62" viewBox="0 0 40 62">
             <use xlink:href="img/sprite.svg#category-interior"></use>
           </svg>
         </a>
@@ -63,7 +90,7 @@
       <div class="main-header__item">
         <a href="#" class="main-header__link">
           Детские<br>игрушки
-          <svg class="main-header__icon" width="60" height="60">
+          <svg class="main-header__icon" width="60" height="60" viewBox="0 0 60 60">
             <use xlink:href="img/sprite.svg#category-toy"></use>
           </svg>
         </a>
@@ -85,7 +112,11 @@
         <dt class="featured__term">Высота:</dt>
         <dd class="featured__definition">15см</dd>
       </dl>
-      <img class="featured__image" src="img/item-triple-set.jpg" width="260" height="315" alt="Вязаные корзинки">
+      <picture class="featured__picture">
+        <source media="(min-width: 1150px)" srcset="img/triple-set-desktop.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+        <source media="(min-width: 768px)" srcset="img/triple-set-tablet.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+        <img class="featured__image" src="img/item-triple-set.jpg" srcset="img/item-triple-set@2x.jpg 2x" width="260" height="315" alt="Вязаные корзинки">
+      </picture>
       <p class="featured__price">Цена: 990 руб.</p>
       <button class="button featured__button" type="button">ЗАКАЗАТЬ</button>
     </div>
@@ -94,22 +125,40 @@
     <div class="about__wrapper">
       <h2 class="about__title">Коротко о нас:</h2>
       <ul class="about__list">
-        <li class="about__item about-icon-eco">
+        <li class="about__item">
+          <svg class="about__icon" width="55" height="38" viewBox="0 0 33 38">
+            <use xlink:href="img/sprite.svg#about-icon-eco"></use>
+          </svg>
           <p class="about__text">Экологически<br>чистые материалы</p>
         </li>
         <li class="about__item about-icon-style">
+          <svg class="about__icon" width="55" height="27" viewBox="0 0 47 27">
+            <use xlink:href="img/sprite.svg#about-icon-style"></use>
+          </svg>
           <p class="about__text">Скандинавский стиль<br>по российской цене</p>
         </li>
-        <li class="about__item about-icon-like">
+        <li class="about__item">
+          <svg class="about__icon" width="55" height="27" viewBox="0 0 34 27">
+            <use xlink:href="img/sprite.svg#about-icon-like"></use>
+          </svg>
           <p class="about__text">Увеличивает лайки<br>на фотографиях</p>
         </li>
         <li class="about__item about-icon-knit">
+          <svg class="about__icon" width="55" height="34" viewBox="0 0 35 34">
+            <use xlink:href="img/sprite.svg#about-icon-knit"></use>
+          </svg>
           <p class="about__text">Связано вручную<br>с любовью и умилением</p>
         </li>
-        <li class="about__item about-icon-rocket">
+        <li class="about__item">
+          <svg class="about__icon" width="55" height="23" viewBox="0 0 55 23">
+            <use xlink:href="img/sprite.svg#about-icon-rocket"></use>
+          </svg>
           <p class="about__text">Поддержка отечественного<br>производителя</p>
         </li>
-        <li class="about__item about-icon-package">
+        <li class="about__item">
+          <svg class="about__icon" width="55" height="32" viewBox="0 0 33 32">
+            <use xlink:href="img/sprite.svg#about-icon-package"></use>
+          </svg>
           <p class="about__text">Поставляется<br>в подарочной упаковке</p>
         </li>
       </ul>
@@ -128,10 +177,16 @@
         <p class="review__author-email">@misssssiskras</p>
       </div>
       <div class="review__controls">
-        <button class="review__previous button" type="button">
+        <button class="review__previous review__button button" type="button">
+          <svg class="review__icon" width="50" height="26" viewBox="0 0 50 26">
+            <use xlink:href="img/sprite.svg#arrow-left"></use>
+          </svg>
           <span class="visually-hidden">Предыдущий отзыв</span>
         </button>
-        <button class="review__next button" type="button">
+        <button class="review__next review__button button" type="button">
+          <svg class="review__icon" width="50" height="26" viewBox="0 0 50 26">
+            <use xlink:href="img/sprite.svg#arrow-right"></use>
+          </svg>
           <span class="visually-hidden">Следующий отзыв</span>
         </button>
       </div>
@@ -158,35 +213,44 @@
 <footer class="page-footer">
   <div class="page-footer__wrapper">
     <a class="page-footer__logo" href="index.html">
-      <svg class="page-footer__icon" width="86" height="35">
+      <svg class="page-footer__icon" width="86" height="35" viewBox="0 0 86 35">
         <use xlink:href="img/sprite.svg#mishka-logo-mobile"></use>
       </svg>
     </a>
     <div class="page-footer__social social">
       <ul class="social__list">
         <li class="social__item">
-          <a class="social__link social__link--instagram" href="#">
+          <a class="social__link" href="#">
+            <svg class="social__icon" width="22" height="21" viewBox="0 0 22 21">
+              <use xlink:href="img/sprite.svg#instagram"></use>
+            </svg>
             <span class="visually-hidden">Мы в Инстаграме</span>
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--facebook" href="#">
+          <a class="social__link" href="#">
+            <svg class="social__icon" width="15" height="29" viewBox="0 0 15 29">
+              <use xlink:href="img/sprite.svg#facebook"></use>
+            </svg>
             <span class="visually-hidden">Мы в Фейсбуке</span>
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--twitter" href="#">
+          <a class="social__link" href="#">
+            <svg class="social__icon" width="23" height="20" viewBox="0 0 23 20">
+              <use xlink:href="img/sprite.svg#twitter"></use>
+            </svg>
             <span class="visually-hidden">Мы в Твиттере</span>
           </a>
         </li>
       </ul>
     </div>
-    <div class="page-footer__copyright">
+    <a class="page-footer__copyright" href="https://htmlacademy.ru/">
       <p class="page-footer__copyright-text">Разработано</p>
-      <svg class="page-footer__copyright-icon" width="27" height="35">
+      <svg class="page-footer__copyright-icon" width="27" height="35" viewBox="0 0 27 35">
         <use xlink:href="img/sprite.svg#htmlacademy-logo"></use>
       </svg>
-    </div>
+    </a>
   </div>
 </footer>
 <script src="./js/script.js"></script>
