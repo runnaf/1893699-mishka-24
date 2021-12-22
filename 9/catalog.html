@@ -49,10 +49,18 @@
       <ul class="user-nav__list">
         <li class="user-nav__item">
           <a href="#" class="user-nav__link user-nav__link--search">
+            <svg class="user-nav__icon" width="18" height="18" viewBox="0 0 18 18">
+              <use xlink:href="img/sprite.svg#header-search"></use>
+            </svg>
             <span class="user-nav__mobile-text">Поиск по сайту</span></a>
         </li>
         <li class="user-nav__item">
-          <a href="#" class="user-nav__link user-nav__link--cart">Корзина: пока пуста</a>
+          <a href="#" class="user-nav__link user-nav__link--cart">
+            <svg class="user-nav__icon" width="21" height="18" viewBox="0 0 21 18">
+              <use xlink:href="img/sprite.svg#cart"></use>
+            </svg>
+            Корзина: пока пуста
+          </a>
         </li>
       </ul>
     </nav>
@@ -161,28 +169,37 @@
     <div class="page-footer__social social">
       <ul class="social__list">
         <li class="social__item">
-          <a class="social__link social__link--instagram" href="#">
+          <a class="social__link" href="#">
+            <svg class="social__icon" width="22" height="21" viewBox="0 0 22 21">
+              <use xlink:href="img/sprite.svg#instagram"></use>
+            </svg>
             <span class="visually-hidden">Мы в Инстаграме</span>
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--facebook" href="#">
+          <a class="social__link" href="#">
+            <svg class="social__icon" width="15" height="29" viewBox="0 0 15 29">
+              <use xlink:href="img/sprite.svg#facebook"></use>
+            </svg>
             <span class="visually-hidden">Мы в Фейсбуке</span>
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--twitter" href="#">
+          <a class="social__link" href="#">
+            <svg class="social__icon" width="23" height="20" viewBox="0 0 23 20">
+              <use xlink:href="img/sprite.svg#twitter"></use>
+            </svg>
             <span class="visually-hidden">Мы в Твиттере</span>
           </a>
         </li>
       </ul>
     </div>
-    <div class="page-footer__copyright">
+    <a class="page-footer__copyright" href="https://htmlacademy.ru/">
       <p class="page-footer__copyright-text">Разработано</p>
       <svg class="page-footer__copyright-icon" width="27" height="35" viewBox="0 0 27 35">
         <use xlink:href="img/sprite.svg#htmlacademy-logo"></use>
       </svg>
-    </div>
+    </a>
   </div>
 </footer>
 <script src="./js/script.js"></script>

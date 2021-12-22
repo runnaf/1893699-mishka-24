@@ -338,16 +338,12 @@ img {
   height: auto;
   z-index: 10;
   background-color: #ffffff;
-  width: 100%;
-  padding: 0 30px;
 }
 .page-header__nav--open.site-nav {
   position: relative;
   height: auto;
   z-index: 10;
   background-color: #ffffff;
-  width: 100%;
-  padding: 0 30px;
 }
 .page-header__nav--nojs {
   position: relative;
@@ -502,8 +498,8 @@ img {
   content: "";
   position: absolute;
   bottom: 0;
-  left: -110px;
-  right: -30px;
+  left: -80px;
+  right: 0;
   height: 1px;
   background-color: #ececec;
 }
@@ -574,6 +570,7 @@ img {
 }
 @media (min-width: 768px) {
   .user-nav__item {
+    min-height: 88px;
     margin-left: 0;
     border-left: 1px solid #ececec;
   }
@@ -582,8 +579,8 @@ img {
   content: "";
   position: absolute;
   bottom: 0;
-  left: -110px;
-  right: -30px;
+  left: -80px;
+  right: 0;
   height: 1px;
   background-color: #ececec;
 }
@@ -593,18 +590,16 @@ img {
   }
 }
 
-.user-nav__link::before {
+.user-nav__icon {
   content: "";
   position: absolute;
   transform: translate(-50%, -50%);
-  width: 30px;
-  height: 30px;
-  border: 1px solid #ececec;
   left: -40px;
   top: 50%;
+  opacity: 0.2;
 }
 @media (min-width: 768px) {
-  .user-nav__link::before {
+  .user-nav__icon {
     left: 40px;
   }
 }
@@ -632,10 +627,22 @@ img {
   color: #63d1bb;
 }
 .user-nav__link:hover {
-  opacity: 0.6;
+  color: rgba(0, 0, 0, 0.6);
 }
 .user-nav__link:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+.user-nav__link:focus .user-nav__icon {
+  opacity: 1;
+  fill: #63d1bb;
+}
+.user-nav__link:hover .user-nav__icon {
+  opacity: 1;
+  fill: #63d1bb;
+}
+.user-nav__link:active .user-nav__icon {
   opacity: 0.3;
+  fill: #63d1bb;
 }
 
 @media (min-width: 768px) {
@@ -1039,6 +1046,8 @@ img {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-auto-flow: column;
+    row-gap: 30px;
+    padding-top: 40px;
   }
 }
 @media (min-width: 1150px) {
@@ -1062,9 +1071,17 @@ img {
 }
 
 .about__item {
+  position: relative;
   display: flex;
   align-items: end;
-  min-height: 120px;
+  min-height: 124px;
+}
+
+svg.about__icon {
+  fill: #63d1bb;
+  position: absolute;
+  top: 22px;
+  left: -6px;
 }
 
 .review__wrapper {
@@ -1197,14 +1214,34 @@ img {
   border: 1px solid #ececec;
 }
 
-.review__next {
-  border-left: none;
-}
-
 @media (min-width: 768px) {
   .review__create-new {
     grid-area: r-new;
   }
+}
+
+.review__button:focus {
+  border: 1px solid #63d1bb;
+}
+.review__button:hover {
+  background-color: #ffffff;
+  border-color: #ececec;
+}
+.review__button:hover .review__icon {
+  opacity: 0.6;
+}
+.review__button:active .review__icon {
+  opacity: 0.3;
+}
+
+.review__next {
+  border-left: none;
+}
+.review__next:hover {
+  border-left: none;
+}
+.review__next:active {
+  border-left: none;
 }
 
 .contacts__wrapper {
@@ -2162,20 +2199,32 @@ img {
 
 .page-footer__logo {
   display: none;
+  outline: none;
 }
 @media (min-width: 768px) {
   .page-footer__logo {
     display: flex;
     align-items: center;
   }
+  .page-footer__logo:focus .page-footer__icon {
+    fill: #63d1bb;
+  }
+  .page-footer__logo:hover .page-footer__icon {
+    fill: #46c1ae;
+  }
+  .page-footer__logo:active .page-footer__icon {
+    opacity: 0.3;
+  }
 }
 
 .page-footer__copyright {
+  text-decoration: none;
   display: flex;
   align-items: center;
   gap: 27px;
   padding: 22px 0 22px 0;
   flex-wrap: wrap;
+  outline: none;
 }
 @media (min-width: 768px) {
   .page-footer__copyright {
@@ -2184,7 +2233,11 @@ img {
     align-self: center;
   }
 }
-.page-footer__copyright .page-footer__copyright-text {
+.page-footer__copyright:focus .page-footer__copyright-icon {
+  fill: #46c1ae;
+}
+
+.page-footer__copyright-text {
   margin: 0;
   font-size: 19px;
   line-height: 24px;
@@ -2199,13 +2252,6 @@ img {
   fill: #46c1ae;
 }
 .page-footer__copyright-icon:active {
-  opacity: 0.3;
-}
-
-.page-footer__icon:hover {
-  fill: #46c1ae;
-}
-.page-footer__icon:active {
   opacity: 0.3;
 }
 
@@ -2225,11 +2271,22 @@ img {
   }
 }
 
-.social__item {
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 40px;
   height: 40px;
   box-sizing: border-box;
-  border-radius: 50%;
-  border: 1px solid #63d1bb;
+  outline: none;
+}
+.social__link:focus .social__icon {
+  fill: #63d1bb;
+}
+.social__link:hover .social__icon {
+  fill: #46c1ae;
+}
+.social__link:active .social__icon {
+  opacity: 0.3;
 }
 /*# sourceMappingURL=style.css.map */
