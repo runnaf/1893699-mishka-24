@@ -93,9 +93,11 @@
         </div>
         <div class="product-card__price">
           1 200 руб.
-          <svg class="product-card__icon" viewBox="0 0 21 18" aria-hidden="true" focusable="false" width="21" height="18">
-            <use href="img/sprite.svg#cart"></use>
-          </svg>
+          <button class="product-card__button">
+            <svg class="product-card__icon" viewBox="0 0 21 18" aria-hidden="true" focusable="false" width="21" height="18">
+              <use href="img/sprite.svg#cart"></use>
+            </svg>
+          </button>
         </div>
       </article>
       <article class="catalog__item product-card">
@@ -112,9 +114,11 @@
         </div>
         <div class="product-card__price">
           690 руб.
-          <svg class="product-card__icon" viewBox="0 0 21 18" aria-hidden="true" focusable="false" width="21" height="18">
-            <use href="img/sprite.svg#cart"></use>
-          </svg>
+          <button class="product-card__button">
+            <svg class="product-card__icon" viewBox="0 0 21 18" aria-hidden="true" focusable="false" width="21" height="18">
+              <use href="img/sprite.svg#cart"></use>
+            </svg>
+          </button>
         </div>
       </article>
       <article class="catalog__item product-card">
@@ -131,9 +135,11 @@
         </div>
         <div class="product-card__price">
           1 500 руб.
-          <svg class="product-card__icon" aria-hidden="true" viewBox="0 0 21 18" focusable="false" width="21" height="18">
-            <use href="img/sprite.svg#cart"></use>
-          </svg>
+          <button class="product-card__button">
+            <svg class="product-card__icon" aria-hidden="true" viewBox="0 0 21 18" focusable="false" width="21" height="18">
+              <use href="img/sprite.svg#cart"></use>
+            </svg>
+          </button>
         </div>
       </article>
     </div>
@@ -201,6 +207,38 @@
     </a>
   </div>
 </footer>
+
+<div class="modal__container modal__container--close">
+  <div class="modal">
+    <h2 class="modal__title">Добавить <br class="modal__title--break">в корзину</h2>
+    <p class="modal__content">Выберите размер:</p>
+    <form class="modal__form" action="https://echo.htmlacademy.ru/">
+      <ul class="modal__list">
+        <li class="modal__item">
+          <label>
+            <input class="visually-hidden modal__input" type="radio" name="product-size" value="S">
+            <span class="modal__label">S</span>
+          </label>
+        </li>
+        <li class="modal__item">
+          <label>
+            <input class="visually-hidden modal__input" type="radio" name="product-size" value="M">
+            <span class="modal__label">M</span>
+          </label>
+        </li>
+        <li class="modal__item">
+          <label>
+            <input class="visually-hidden modal__input" type="radio" name="product-size" value="L">
+            <span class="modal__label">L</span>
+          </label>
+        </li>
+      </ul>
+      <button class="button modal__button" type="submit">Добавить</button>
+    </form>
+  </div>
+</div>
+
 <script src="./js/script.js"></script>
+<script src="./js/modal-catalog.js"></script>
 </body>
 </html>
