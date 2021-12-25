@@ -2,6 +2,7 @@ var navSite = document.querySelector('.site-nav');
 var navUser = document.querySelector('.user-nav');
 var navToggle = document.querySelector('.page-header__toggle');
 
+
 navSite.classList.remove('page-header__nav--nojs');
 navUser.classList.remove('page-header__nav--nojs');
 navToggle.classList.remove('page-header__toggle--nojs');
