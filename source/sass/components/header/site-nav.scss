@@ -2,7 +2,7 @@
   @media (min-width: $tablet-width) {
     grid-area: site-nav;
     align-self: center;
-    justify-self: start;
+    justify-self: flex-start;
   }
 
   @media (min-width: $desktop-width) {
@@ -25,7 +25,7 @@
   position: relative;
   min-height: 80px;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   margin-left: 80px;
   align-items: center;
 
