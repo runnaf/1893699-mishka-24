@@ -2,7 +2,7 @@
   position: relative;
   padding: 0 30px;
   display: grid;
-  row-gap: 30px;
+  row-gap: 13px;
   box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
@@ -74,7 +74,7 @@
 }
 
 .review__text {
-  margin: 0;
+  margin: 0 0 20px;
   font-size: 15px;
   line-height: 30px;
 
@@ -87,7 +87,7 @@
 .review__author {
   font-size: 17px;
   line-height: 24px;
-  margin: 0;
+  margin: 0 0 20px;
   color: $text-title;
 
   @media (min-width: $tablet-width) {
@@ -96,9 +96,8 @@
 }
 
 .review__author-name {
-  margin: 0;
+  margin: 0 0 6px;
   font-weight: 700;
-  margin-bottom: 10px;
 
   @media (min-width: $tablet-width) {
     grid-area: r-author;
@@ -113,6 +112,7 @@
 
 .review__controls {
   display: flex;
+  margin: 0 0 25px;
 
   @media (min-width: $tablet-width) {
     grid-area: r-controls;

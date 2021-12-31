@@ -23,7 +23,7 @@
 
 .main-header__title {
   display: block;
-  padding-top: 73px;
+  padding-top: 72px;
   font-size: 27px;
   line-height: 30px;
   font-weight: 700;
@@ -31,7 +31,7 @@
   background: url("./../img/main-image-mobile.jpg") no-repeat center;
   background-size: cover;
   margin: 0;
-  height: 300px;
+  height: 335px;
   text-align: center;
   box-sizing: border-box;
 
@@ -68,7 +68,7 @@
 .main-header__wrapper {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  margin: -53px auto 0;
   align-items: flex-end;
 
   @media (min-width: $tablet-width) {
@@ -111,11 +111,13 @@
 
 .main-header__link {
   display: flex;
+  position: relative;
   min-height: 103px;
   justify-content: space-between;
-  align-items: center;
   color: $main-background;
   text-decoration: none;
+  padding-top: 24px;
+  box-sizing: border-box;
   font-size: 19px;
   line-height: 24px;
   font-weight: 700;
@@ -141,6 +143,18 @@
 }
 
 .main-header__icon {
+  position: absolute;
+
   fill: $dark-green;
   opacity: 0.5;
+
+  &--interior {
+    top: 23px;
+    right: 6px;
+  }
+
+  &--toy {
+    top: 21px;
+    right: -3px;
+  }
 }

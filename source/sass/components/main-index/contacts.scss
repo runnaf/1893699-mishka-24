@@ -1,7 +1,7 @@
 .contacts__wrapper {
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: 30px;
+  row-gap: 32px;
   padding: 0 30px;
   box-sizing: border-box;
 
@@ -30,6 +30,7 @@
   font-weight: 700;
   color: $text-title;
   text-align: left;
+  letter-spacing: -1.25px;
 
   @media (min-width: $tablet-width) {
     font-size: 43px;
@@ -69,8 +70,9 @@
 .contacts__address {
   display: grid;
   grid-template-columns: max-content max-content;
-  column-gap: 35px;
-  row-gap: 30px;
+  column-gap: 33px;
+  row-gap: 35px;
+  margin-bottom: 30px;
 
   @media (min-width: $tablet-width) {
     grid-template-columns: repeat(4, max-content);
@@ -86,12 +88,16 @@
 .contacts__text {
   margin: 0;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 30px;
   font-style: normal;
 
   @media (min-width: $tablet-width) {
     font-size: 17px;
     line-height: 30px;
+  }
+
+  &--email {
+    line-height: 20px;
   }
 }
 
@@ -126,7 +132,7 @@
 .contacts__map {
   border: none;
   display: block;
-  margin-left: -30px;
+  margin: 0 0 9px -30px;
   width: calc(100% + 60px);
 
   @media (min-width: $tablet-width) {
@@ -142,8 +148,8 @@
 }
 
 .contacts__feedback {
-  width: calc(100% - 60px);
   justify-self: center;
+  letter-spacing: 1.2px;
 
   @media (min-width: $tablet-width) {
     width: auto;
