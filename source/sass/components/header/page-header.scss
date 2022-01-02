@@ -30,12 +30,12 @@
   @media (min-width: $tablet-width) {
     position: relative;
     padding: 0 50px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 28px 1fr;
     grid-template-rows: 1fr $header-second-string;
     grid-auto-flow: column;
     grid-template-areas:
-      "header-logo user-nav"
-      "site-nav delivery-info";
+      "header-logo user-nav user-nav"
+      "site-nav site-nav delivery-info";
   }
 
   @media (min-width: $desktop-width) {
@@ -161,9 +161,10 @@
   @media (min-width: $tablet-width) {
     display: block;
     grid-area: delivery-info;
-    align-self: center;
+    align-self: flex-end;
     justify-self: end;
     z-index: 3;
+    line-height: 26px;
   }
 }
 

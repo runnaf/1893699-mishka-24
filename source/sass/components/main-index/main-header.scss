@@ -8,9 +8,9 @@
       left: 0;
       right: 0;
       bottom: -12px;
-      background: url("./../img/zigzag-fill-desktop.svg") repeat-x;
+      background: url("./../img/zigzag-fill-desktop.svg") repeat-x -3px;
       background-size: contain;
-      height: 24px;
+      height: 21px;
       z-index: 3;
     }
 
@@ -44,7 +44,7 @@
     padding-top: 155px;
     font-size: 43px;
     line-height: 50px;
-    height: 625px;
+    height: 744px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("./../img/main-image-desktop@2x.jpg");
@@ -100,7 +100,7 @@
   &:hover,
   &:focus-within {
     @media (min-width: $tablet-width) {
-      height: 135px;
+      height: 122px;
     }
   }
 }
@@ -124,13 +124,11 @@
   outline: none;
 
   @media (min-width: $tablet-width) {
-    min-height: 130px;
-  }
-
-  &:hover {
-    @media (min-width: $tablet-width) {
-      height: 135px;
-    }
+    min-height: 117px;
+    padding: 0 0 6px 6px;
+    align-items: center;
+    line-height: 30px;
+    letter-spacing: 0.8px;
   }
 
   &:hover .main-header__icon {
@@ -151,10 +149,20 @@
   &--interior {
     top: 23px;
     right: 6px;
+
+    @media (min-width: $tablet-width) {
+      top: 30px;
+      right: 6px;
+    }
   }
 
   &--toy {
     top: 21px;
     right: -3px;
+
+    @media (min-width: $tablet-width) {
+      top: 31px;
+      right: 3px;
+    }
   }
 }

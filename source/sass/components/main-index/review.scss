@@ -6,7 +6,7 @@
   box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
-    padding: 82px 50px 47px;
+    padding: 99px 50px 47px;
     row-gap: 40px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas:
@@ -37,13 +37,14 @@
     position: absolute;
     height: 6px;
     background: url("./../img/zigzag-line-desktop.svg") repeat-x;
-    bottom: -51px;
+    bottom: -42px;
     left: 0;
     right: 0;
 
     @media (min-width: $tablet-width) {
-      bottom: -85px;
+      bottom: -64px;
       height: 17px;
+      background: url("./../img/zigzag-line-desktop2.svg") repeat-x -20px;
       background-size: contain;
     }
 
@@ -64,7 +65,8 @@
   @media (min-width: $tablet-width) {
     grid-area: r-title;
     font-size: 43px;
-    line-height: 50px;
+    line-height: 48px;
+    align-self: flex-end;
   }
 
   @media (min-width: $desktop-width) {
@@ -82,6 +84,12 @@
     grid-area: r-text;
     font-size: 17px;
   }
+
+  &--break {
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
 }
 
 .review__author {
@@ -92,6 +100,8 @@
 
   @media (min-width: $tablet-width) {
     grid-area: r-author;
+    margin: 0;
+    align-self: flex-start;
   }
 }
 
@@ -102,6 +112,7 @@
   @media (min-width: $tablet-width) {
     grid-area: r-author;
     font-weight: 700;
+    letter-spacing: 0.6px;
   }
 }
 
@@ -116,28 +127,44 @@
 
   @media (min-width: $tablet-width) {
     grid-area: r-controls;
+    margin-left: -7px;
+    padding-top: 4px;
   }
 }
 
 .review__previous,
 .review__next {
   border: 1px solid $border-color;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+  }
 }
 
 .review__create-new {
   @media (min-width: $tablet-width) {
     grid-area: r-new;
+    margin-left: -10px;
+    width: auto;
   }
 }
 
 .review__button {
   &:focus {
     border: 1px solid $main-green;
+
+    @media (min-width: $tablet-width) {
+      border: none;
+    }
   }
 
   &:hover {
     background-color: $main-background;
     border-color: $border-color;
+
+    @media (min-width: $tablet-width) {
+      border: none;
+    }
   }
 
   &:hover .review__icon {

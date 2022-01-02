@@ -8,6 +8,7 @@
   @media (min-width: $tablet-width) {
     padding: 0 50px;
     margin-bottom: 0;
+    row-gap: 34px;
   }
 
   @media (min-width: $desktop-width) {
@@ -39,6 +40,7 @@
     min-height: 80px;
     display: flex;
     align-items: center;
+    letter-spacing: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -51,11 +53,10 @@
     @media (min-width: $tablet-width) {
       position: absolute;
       content: "";
-      right: 0;
-      top: 50%;
+      right: 3px;
+      top: -8px;
       width: 47px;
       height: 80px;
-      transform: translate(0, -50%);
       background: url("./../img/contact-flag.svg") no-repeat right;
     }
 
@@ -75,8 +76,10 @@
   margin-bottom: 30px;
 
   @media (min-width: $tablet-width) {
-    grid-template-columns: repeat(4, max-content);
-    align-items: start;
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    margin-bottom: 14px;
   }
 
   @media (min-width: $desktop-width) {
@@ -98,6 +101,16 @@
 
   &--email {
     line-height: 20px;
+
+    @media (min-width: $tablet-width) {
+      line-height: 30px;
+    }
+  }
+
+  &--tablet {
+    @media (min-width: $tablet-width) {
+      margin-left: 26px;
+    }
   }
 }
 
@@ -136,8 +149,8 @@
   width: calc(100% + 60px);
 
   @media (min-width: $tablet-width) {
-    margin-left: -50px;
     width: calc(100% + 100px);
+    margin: 0 0 24px -50px;
   }
 
   @media (min-width: $desktop-width) {
@@ -153,7 +166,8 @@
 
   @media (min-width: $tablet-width) {
     width: auto;
-    padding: 0 30px;
+    padding: 0 42px;
+    letter-spacing: 0;
   }
 
   @media (min-width: $desktop-width) {
