@@ -1,7 +1,7 @@
 .form-order {
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: 33px;
+  row-gap: 25px;
 
   @media (min-width: $tablet-width) {
     row-gap: 0;
@@ -77,15 +77,36 @@
   background-color: $main-background;
   display: block;
   position: relative;
-  margin: 0 0 25px 0;
-  padding: 0 10px 0 0;
+  margin: 0;
+  padding: 0;
   font-size: 17px;
   text-transform: uppercase;
   font-weight: 700;
   color: $main-green;
+  line-height: 30px;
 
   @media (min-width: $tablet-width) {
     background-color: inherit;
+  }
+
+  &--radio {
+    margin-bottom: 25px;
+    padding-right: 17px;
+  }
+
+  &--checkbox {
+    margin-bottom: 18px;
+    padding-right: 25px;
+  }
+
+  &--name {
+    margin-bottom: 23px;
+    padding-right: 18px;
+  }
+
+  &--add {
+    margin-bottom: 17px;
+    padding-right: 18px;
   }
 }
 
@@ -95,10 +116,12 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 16px;
   list-style-type: none;
 
   &--checkbox {
+    gap: 23px;
+
     @media (min-width: $tablet-width) {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -107,6 +130,10 @@
     @media (min-width: $desktop-width) {
       grid-template-columns: 1fr 1fr 1fr;
     }
+  }
+
+  &--name {
+    gap: 22px;
   }
 }
 
@@ -132,7 +159,7 @@
 }
 
 .form-order__info {
-  margin: 0;
+  margin: -9px 0 0 0;
   font-size: 14px;
   line-height: 16px;
 

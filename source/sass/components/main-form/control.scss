@@ -32,8 +32,8 @@
 .control__input {
   &[type="radio"] + .control__mark {
     border-radius: 50%;
-    width: 42px;
-    height: 42px;
+    width: 38px;
+    height: 38px;
   }
 
   &[type="checkbox"]:checked + .control__mark::before {
