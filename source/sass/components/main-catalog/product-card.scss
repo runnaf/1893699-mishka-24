@@ -50,7 +50,7 @@
 }
 
 .product-card__info {
-  padding: 28px 28px 17px 28px;
+  padding: 27px 28px 18px 28px;
   position: relative;
 
   &::before {
@@ -66,6 +66,10 @@
   @media (min-width: $tablet-width) {
     grid-area: pc-info;
   }
+}
+
+.product-card__info .product-card__title {
+  line-height: 24px;
 }
 
 .product-card__title {
@@ -95,7 +99,7 @@
 .product-card__text {
   font-size: 13px;
   line-height: 30px;
-  margin: 0;
+  margin: 5px 0 0 0;
 
   @media (min-width: $tablet-width) {
     font-size: 15px;
@@ -145,4 +149,5 @@
   background-color: transparent;
   border: none;
   outline: none;
+  padding: 0 0 2px 0;
 }
