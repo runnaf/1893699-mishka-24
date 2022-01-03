@@ -3,11 +3,9 @@
   flex-direction: column;
   padding: 0;
   gap: 23px;
-  margin-top: -15px;
 
   @media (min-width: $tablet-width) {
     gap: 0;
-    margin-top: -12px;
   }
 }
 
@@ -41,6 +39,6 @@
     width: $desktop-page-width;
     grid-template-columns: 1fr 4fr 1fr;
     padding: 0;
-    margin: 0 auto;
+    margin: 0 auto 15px;
   }
 }

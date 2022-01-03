@@ -74,6 +74,8 @@
   fill: $main-green;
   align-self: center;
   justify-self: center;
+  padding-left: 7px;
+  padding-bottom: 4px;
 
   @media (min-width: $tablet-width) {
     justify-self: left;
