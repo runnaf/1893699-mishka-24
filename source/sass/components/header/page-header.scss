@@ -175,12 +175,12 @@
     z-index: 3;
     grid-area: sale-info;
     display: flex;
-    align-self: center;
+    align-self: flex-end;
     justify-self: start;
     list-style-type: none;
     padding: 0;
     margin: 0;
-    gap: 45px;
+    gap: 62px;
   }
 }
 

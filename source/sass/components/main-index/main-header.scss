@@ -17,6 +17,7 @@
     @media (min-width: $desktop-width) {
       height: 34px;
       bottom: -17px;
+      background: url("./../img/zigzag-fill-desktop.svg") repeat-x 11px;
     }
   }
 }
@@ -129,6 +130,11 @@
     align-items: center;
     line-height: 30px;
     letter-spacing: 0.8px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 120px;
+    padding: 0 0 8px 6px;
   }
 
   &:hover .main-header__icon {

@@ -16,6 +16,8 @@
     margin: 0 auto;
     max-width: $desktop-page-width;
     grid-template-columns: 1fr 2fr 3fr;
+    grid-template-rows: max-content 1fr max-content;
+    row-gap: 24px;
     grid-template-areas:
       ". c-title  c-map"
       ". c-address c-map"
@@ -47,6 +49,7 @@
     grid-area: c-title;
     font-size: 53px;
     line-height: 57px;
+    padding-top: 67px;
   }
 
   &::after {
@@ -62,6 +65,8 @@
 
     @media (min-width: $desktop-width) {
       left: -25%;
+      bottom: -35px;
+      top: auto;
       //      -25% это середина соседнего грид столбца 1fr
       transform: translate(-50%, -50%);
     }
@@ -83,8 +88,11 @@
   }
 
   @media (min-width: $desktop-width) {
+    display: grid;
     grid-area: c-address;
     grid-template-columns: max-content max-content;
+    grid-template-rows: max-content max-content;
+    row-gap: 26px;
   }
 }
 
@@ -105,11 +113,19 @@
     @media (min-width: $tablet-width) {
       line-height: 30px;
     }
+
+    @media (min-width: $desktop-width) {
+      line-height: 34px;
+    }
   }
 
   &--tablet {
     @media (min-width: $tablet-width) {
       margin-left: 26px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-left: 0;
     }
   }
 }
@@ -128,6 +144,10 @@
   @media (min-width: $tablet-width) {
     font-size: 17px;
     line-height: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    line-height: 34px;
   }
 
   &:hover,

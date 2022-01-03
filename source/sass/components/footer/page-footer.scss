@@ -15,7 +15,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 55px 0 60px;
+    padding: 50px 0 60px;
     margin: 0 auto;
     max-width: $desktop-page-width;
   }
@@ -71,6 +71,10 @@
     padding: 0;
     justify-self: center;
     align-self: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 30px;
   }
 
   &:focus .page-footer__copyright-icon {

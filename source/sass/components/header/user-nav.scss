@@ -72,6 +72,11 @@
     padding-left: 82px;
   }
 
+  @media (min-width: $desktop-width) {
+    padding-left: 80px;
+    padding-right: 3px;
+  }
+
   &--search {
     @media (min-width: $tablet-width) {
       width: 80px;

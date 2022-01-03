@@ -11,7 +11,6 @@
   @media (min-width: $tablet-width) {
     padding: 0 50px;
     grid-template-columns: 2fr 1fr 1fr;
-    //    row-gap: 38px;
     grid-template-areas:
       "f-title f-title f-subtitle"
       "f-text f-image f-image"
@@ -25,6 +24,8 @@
     max-width: $desktop-page-width;
     padding: 0;
     grid-template-columns: 1fr 2fr 1fr 2fr;
+    grid-template-rows: max-content max-content max-content 1fr max-content;
+    row-gap: 33px;
     grid-template-areas:
       "f-subtitle f-title f-image f-image"
       ". f-text f-image f-image"
@@ -51,7 +52,7 @@
 
     @media (min-width: $desktop-width) {
       height: 23px;
-      bottom: -90px;
+      bottom: -96px;
     }
   }
 }
@@ -76,11 +77,13 @@
   }
 
   @media (min-width: $desktop-width) {
-    grid-column: 2 / 4;
+    grid-column: 2 / 5;
     z-index: 3;
     font-size: 53px;
     line-height: 57px;
-    align-self: center;
+    align-self: flex-end;
+    margin: 0;
+    padding: 60px 0 0 0;
   }
 }
 
@@ -104,6 +107,9 @@
 
   @media (min-width: $desktop-width) {
     justify-self: center;
+    margin: 0;
+    align-self: flex-end;
+    padding: 0 12px 14px 0;
   }
 }
 
@@ -118,6 +124,11 @@
     font-size: 17px;
     line-height: 30px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 0 0;
+    padding: 3px 50px 0 0;
+  }
 }
 
 .featured__picture {
@@ -126,6 +137,10 @@
     width: 100%;
     background-size: cover;
     margin-top: 12px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
   }
 }
 
@@ -152,6 +167,10 @@
     grid-area: f-description;
     grid-template-rows: repeat(auto-fill, 40px);
     align-items: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 17px 0 0 0;
   }
 }
 
@@ -185,6 +204,11 @@
     align-self: flex-end;
     padding-bottom: 3px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    margin: 0 58px 0 0;
+  }
 }
 
 .featured__button {
@@ -193,5 +217,9 @@
     width: auto;
     margin: 0 40px 0 0;
     align-self: flex-end;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 58px 0 0;
   }
 }
