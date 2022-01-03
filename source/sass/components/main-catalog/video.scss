@@ -11,7 +11,7 @@
   border: 1px solid $border-color;
 
   @media (min-width: $tablet-width) {
-    grid-template-columns: 110px 1fr;
+    grid-template-columns: 106px 1fr;
     grid-template-areas:
       "video__image video__image"
       "video__icon video__title"
@@ -57,6 +57,7 @@
   @media (min-width: $tablet-width) {
     padding: 0;
     font-size: 20px;
+    justify-self: flex-start;
   }
 
   @media (min-width: $desktop-width) {

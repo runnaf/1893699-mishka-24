@@ -65,11 +65,8 @@
 
   @media (min-width: $tablet-width) {
     grid-area: pc-info;
+    padding: 28px 15px 18px 33px;
   }
-}
-
-.product-card__info .product-card__title {
-  line-height: 24px;
 }
 
 .product-card__title {
@@ -84,7 +81,7 @@
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
-    line-height: 24px;
+    line-height: 22px;
   }
 
   &:hover {
@@ -120,6 +117,7 @@
   @media (min-width: $tablet-width) {
     grid-area: pc-price;
     font-size: 17px;
+    padding: 22px 32px 26px 32px;
   }
 
   &:hover {
