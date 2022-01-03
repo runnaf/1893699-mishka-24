@@ -74,7 +74,6 @@
   }
 
   &:disabled + .control__mark,
-  &:disabled:focus + .control__mark,
   &:disabled:hover + .control__mark {
     border-color: $footer-border;
   }
@@ -98,11 +97,6 @@
   &[type="radio"]:disabled + .control__mark::before {
     display: none;
     border-color: $border-color;
-  }
-
-  &:hover + .control__mark,
-  &:focus + .control__mark {
-    border-color: $main-green;
   }
 
   &:active + .control__mark {
