@@ -87,6 +87,7 @@
 
   @media (min-width: $tablet-width) {
     background-color: inherit;
+    margin: 9px 0 0 0;
   }
 
   &--radio {
@@ -99,6 +100,16 @@
     padding-right: 25px;
   }
 
+  &--tel,
+  &--email {
+    margin: 0;
+    padding-right: 20px;
+
+    @media (min-width: $tablet-width) {
+      margin: 9px 0 0 0;
+    }
+  }
+
   &--name {
     margin-bottom: 23px;
     padding-right: 18px;
@@ -107,6 +118,10 @@
   &--add {
     margin-bottom: 17px;
     padding-right: 18px;
+
+    @media (min-width: $tablet-width) {
+      margin: 12px 0 0 0;
+    }
   }
 }
 
@@ -119,12 +134,17 @@
   gap: 16px;
   list-style-type: none;
 
+  @media (min-width: $tablet-width) {
+    gap: 25px;
+  }
+
   &--checkbox {
     gap: 23px;
 
     @media (min-width: $tablet-width) {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      row-gap: 27px;
     }
 
     @media (min-width: $desktop-width) {
@@ -134,6 +154,10 @@
 
   &--name {
     gap: 22px;
+
+    @media (min-width: $tablet-width) {
+      gap: 24px;
+    }
   }
 }
 
@@ -167,6 +191,9 @@
     grid-area: f-info;
     justify-self: right;
     align-self: center;
+    font-size: 17px;
+    line-height: 30px;
+    padding-top: 12px;
   }
 }
 
@@ -176,5 +203,6 @@
     width: auto;
     justify-self: left;
     padding: 0 30px;
+    margin-top: 3px;
   }
 }

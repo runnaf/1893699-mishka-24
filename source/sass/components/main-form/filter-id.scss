@@ -31,6 +31,8 @@
   @media (min-width: $tablet-width) {
     flex-grow: 1;
     font-size: 19px;
+    padding-left: 18px;
+    letter-spacing: 0.4px;
   }
 
   &:hover,
