@@ -30,12 +30,12 @@
   @media (min-width: $tablet-width) {
     position: relative;
     padding: 0 50px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 28px 1fr;
     grid-template-rows: 1fr $header-second-string;
     grid-auto-flow: column;
     grid-template-areas:
-      "header-logo user-nav"
-      "site-nav delivery-info";
+      "header-logo user-nav user-nav"
+      "site-nav site-nav delivery-info";
   }
 
   @media (min-width: $desktop-width) {
@@ -52,8 +52,8 @@
 
 .page-header__toggle {
   position: absolute;
-  right: 30px;
-  top: 40px;
+  right: 21px;
+  top: 39px;
   transform: translateY(-50%);
   border: none;
   width: 40px;
@@ -129,7 +129,8 @@
     justify-self: center;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: 0.6;
   }
 
@@ -161,9 +162,10 @@
   @media (min-width: $tablet-width) {
     display: block;
     grid-area: delivery-info;
-    align-self: center;
+    align-self: flex-end;
     justify-self: end;
     z-index: 3;
+    line-height: 26px;
   }
 }
 
@@ -174,12 +176,12 @@
     z-index: 3;
     grid-area: sale-info;
     display: flex;
-    align-self: center;
+    align-self: flex-end;
     justify-self: start;
     list-style-type: none;
     padding: 0;
     margin: 0;
-    gap: 45px;
+    gap: 62px;
   }
 }
 

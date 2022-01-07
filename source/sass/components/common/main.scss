@@ -15,7 +15,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 0 30px 0;
+  margin: 0 0 16px 0;
   background-color: $border-color;
   font-size: 27px;
   line-height: 30px;
@@ -23,17 +23,20 @@
   color: $text-title;
 
   @media (min-width: $tablet-width) {
-    min-height: 238px;
+    min-height: 240px;
     font-size: 43px;
     line-height: 50px;
-    margin-bottom: 65px;
+    margin-bottom: 53px;
+    padding-top: 14px;
+    box-sizing: border-box;
   }
 
   @media (min-width: $desktop-width) {
     min-height: 272px;
     font-size: 53px;
     line-height: 57px;
-    margin-bottom: 110px;
+    margin-bottom: 98px;
+    padding: 0 0 11px 0;
   }
 
   &::before {
@@ -59,11 +62,11 @@
   margin-bottom: 31px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 52px;
+    margin-bottom: 54px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 66px;
+    margin-bottom: 71px;
   }
 }
 
@@ -83,11 +86,11 @@
   margin-bottom: 58px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 83px;
+    margin-bottom: 63px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 90px;
+    margin-bottom: 88px;
   }
 }
 
@@ -95,7 +98,7 @@
   margin-bottom: 89px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 131px;
+    margin-bottom: 116px;
   }
 
   @media (min-width: $desktop-width) {
@@ -117,9 +120,11 @@
 
 .main__catalog {
   margin-bottom: 30px;
+  margin-top: 15px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 53px;
+    margin-top: 12px;
   }
 
   @media (min-width: $desktop-width) {
@@ -144,6 +149,10 @@
   margin-bottom: 55px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 7px;
+    margin-bottom: 5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 3px;
   }
 }

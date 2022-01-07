@@ -7,9 +7,8 @@
   &--tel::before {
     position: absolute;
     content: "";
-    top: 50%;
+    top: 10px;
     right: 7px;
-    transform: translateY(-50%);
     opacity: 0.2;
     width: 25px;
     height: 24px;
@@ -65,6 +64,8 @@
 
   @media (min-width: $tablet-width) {
     font-size: 19px;
+    padding-left: 18px;
+    letter-spacing: 0.4px;
   }
 
   &:hover,
@@ -76,8 +77,4 @@
     border-color: $main-green;
     color: $text-title;
   }
-}
-
-.filter-contact__title {
-  margin: 0;
 }

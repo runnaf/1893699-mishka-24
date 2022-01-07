@@ -11,7 +11,7 @@
   border: 1px solid $border-color;
 
   @media (min-width: $tablet-width) {
-    grid-template-columns: 110px 1fr;
+    grid-template-columns: 106px 1fr;
     grid-template-areas:
       "video__image video__image"
       "video__icon video__title"
@@ -27,7 +27,7 @@
     grid-template-columns: 2fr 0 1fr;
     grid-template-rows: min-content min-content min-content 1fr;
     column-gap: 52px;
-    row-gap: 27px;
+    row-gap: 29px;
     grid-template-areas:
       "video__image video__image video__icon"
       "video__image video__image video__title"
@@ -57,10 +57,11 @@
   @media (min-width: $tablet-width) {
     padding: 0;
     font-size: 20px;
+    justify-self: flex-start;
   }
 
   @media (min-width: $desktop-width) {
-    padding-left: 40px;
+    padding-left: 27px;
     width: 180px;
     align-self: start;
     justify-self: start;
@@ -73,6 +74,8 @@
   fill: $main-green;
   align-self: center;
   justify-self: center;
+  padding-left: 7px;
+  padding-bottom: 4px;
 
   @media (min-width: $tablet-width) {
     justify-self: left;
@@ -80,7 +83,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 47px;
+    padding: 47px 0 0 27px;
   }
 }
 
@@ -144,7 +147,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0 40px 0 40px;
+    padding: 0 40px 0 27px;
   }
 }
 
@@ -158,8 +161,9 @@
   }
 
   @media (min-width: $desktop-width) {
-    justify-self: center;
-    align-self: center;
-    width: calc(100% - 80px);
+    justify-self: flex-start;
+    align-self: flex-start;
+    width: calc(100% - 84px);
+    margin: 5px 0 0 27px;
   }
 }

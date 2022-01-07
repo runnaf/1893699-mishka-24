@@ -2,11 +2,11 @@
   position: relative;
   padding: 0 30px;
   display: grid;
-  row-gap: 30px;
+  row-gap: 13px;
   box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
-    padding: 82px 50px 47px;
+    padding: 99px 50px 47px;
     row-gap: 40px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas:
@@ -22,14 +22,17 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 78px 0 96px;
+    padding: 78px 0 0 0;
     margin: 0 auto;
+    min-height: 457px;
     max-width: $desktop-page-width;
     grid-template-columns: repeat(6, 1fr);
+    row-gap: 35px;
     grid-template-areas:
       ". r-title r-title . . r-new"
       ". r-text r-text r-text r-text r-text"
       ". r-author r-author . . r-controls";
+    grid-template-rows: max-content max-content 1fr;
   }
 
   &::after {
@@ -37,13 +40,14 @@
     position: absolute;
     height: 6px;
     background: url("./../img/zigzag-line-desktop.svg") repeat-x;
-    bottom: -51px;
+    bottom: -42px;
     left: 0;
     right: 0;
 
     @media (min-width: $tablet-width) {
-      bottom: -85px;
+      bottom: -64px;
       height: 17px;
+      background: url("./../img/zigzag-line-desktop2.svg") repeat-x -20px;
       background-size: contain;
     }
 
@@ -64,7 +68,8 @@
   @media (min-width: $tablet-width) {
     grid-area: r-title;
     font-size: 43px;
-    line-height: 50px;
+    line-height: 48px;
+    align-self: flex-end;
   }
 
   @media (min-width: $desktop-width) {
@@ -74,7 +79,7 @@
 }
 
 .review__text {
-  margin: 0;
+  margin: 0 0 20px;
   font-size: 15px;
   line-height: 30px;
 
@@ -82,27 +87,48 @@
     grid-area: r-text;
     font-size: 17px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    padding-right: 60px;
+  }
+
+  &--break {
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
 }
 
 .review__author {
   font-size: 17px;
   line-height: 24px;
-  margin: 0;
+  margin: 0 0 20px;
   color: $text-title;
 
   @media (min-width: $tablet-width) {
     grid-area: r-author;
+    margin: 0;
+    align-self: flex-start;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 10px;
   }
 }
 
 .review__author-name {
-  margin: 0;
+  margin: 0 0 6px;
   font-weight: 700;
-  margin-bottom: 10px;
 
   @media (min-width: $tablet-width) {
     grid-area: r-author;
     font-weight: 700;
+    letter-spacing: 0.6px;
+  }
+
+  @media (min-width: $desktop-width) {
+    letter-spacing: 0;
   }
 }
 
@@ -113,31 +139,62 @@
 
 .review__controls {
   display: flex;
+  margin: 0 0 25px;
 
   @media (min-width: $tablet-width) {
     grid-area: r-controls;
+    margin-left: -7px;
+    padding-top: 4px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    padding: 0;
+    align-self: flex-start;
+    min-height: 76px;
   }
 }
 
 .review__previous,
 .review__next {
   border: 1px solid $border-color;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+  }
 }
 
 .review__create-new {
   @media (min-width: $tablet-width) {
     grid-area: r-new;
+    margin-left: -10px;
+    width: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 4px 0;
+    height: 52px;
+    align-self: flex-end;
   }
 }
 
 .review__button {
   &:focus {
     border: 1px solid $main-green;
+
+    @media (min-width: $tablet-width) {
+      border: none;
+      fill: $main-green;
+    }
   }
 
   &:hover {
     background-color: $main-background;
     border-color: $border-color;
+
+    @media (min-width: $tablet-width) {
+      border: none;
+    }
   }
 
   &:hover .review__icon {

@@ -19,10 +19,10 @@
 
 .user-nav__item {
   position: relative;
-  min-height: 80px;
+  min-height: 79px;
   display: flex;
-  justify-content: start;
-  margin-left: 80px;
+  justify-content: flex-start;
+  margin-left: 76px;
   align-items: center;
 
   @media (min-width: $tablet-width) {
@@ -51,7 +51,7 @@
   content: "";
   position: absolute;
   transform: translate(-50%, -50%);
-  left: -40px;
+  left: -35px;
   top: 50%;
   opacity: 0.2;
 
@@ -69,7 +69,12 @@
   outline: none;
 
   @media (min-width: $tablet-width) {
-    padding-left: 75px;
+    padding-left: 82px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 80px;
+    padding-right: 3px;
   }
 
   &--search {

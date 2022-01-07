@@ -1,7 +1,7 @@
 .form-order {
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: 33px;
+  row-gap: 25px;
 
   @media (min-width: $tablet-width) {
     row-gap: 0;
@@ -10,6 +10,11 @@
 
 .form-order__legend-wrapper {
   width: max-content;
+
+  @media (min-width: $desktop-width) {
+    justify-self: flex-start;
+    padding-left: 60px;
+  }
 }
 
 .form-order__wrapper {
@@ -27,7 +32,7 @@
   @media (min-width: $desktop-width) {
     grid-template-columns: 1fr 4fr 1fr;
     max-width: $desktop-page-width;
-    padding: 50px 0;
+    padding: 50px 0 50px;
     margin: 0 auto;
   }
 
@@ -46,6 +51,13 @@
     }
   }
 
+  &--checkbox {
+    @media (min-width: $desktop-width) {
+      grid-template-columns: 1fr 5fr;
+      padding-bottom: 54px;
+    }
+  }
+
   &--tel {
     @media (min-width: $tablet-width) {
       padding-bottom: 12px;
@@ -60,7 +72,6 @@
 }
 
 .form-order__filter-group {
-
   margin: 0;
   padding: 0;
   border: none;
@@ -77,15 +88,51 @@
   background-color: $main-background;
   display: block;
   position: relative;
-  margin: 0 0 25px 0;
-  padding: 0 10px 0 0;
+  margin: 0;
+  padding: 0;
   font-size: 17px;
   text-transform: uppercase;
   font-weight: 700;
   color: $main-green;
+  line-height: 30px;
+
+  &--radio {
+    margin-bottom: 25px;
+    padding-right: 17px;
+  }
+
+  &--checkbox {
+    margin-bottom: 18px;
+    padding-right: 25px;
+  }
+
+  &--tel,
+  &--email {
+    margin: 0;
+    padding-right: 20px;
+  }
+
+  &--name {
+    margin-bottom: 23px;
+    padding-right: 18px;
+  }
+
+  &--add {
+    margin-bottom: 17px;
+    padding-right: 18px;
+
+    @media (min-width: $tablet-width) {
+      margin: 12px 0 0 0;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     background-color: inherit;
+    margin: 9px 0 0 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 11px 0 0 0;
   }
 }
 
@@ -95,17 +142,34 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 16px;
   list-style-type: none;
 
+  @media (min-width: $tablet-width) {
+    gap: 25px;
+  }
+
   &--checkbox {
+    gap: 23px;
+
     @media (min-width: $tablet-width) {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      row-gap: 27px;
     }
 
     @media (min-width: $desktop-width) {
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 250px 250px 250px;
+      column-gap: 12px;
+      row-gap: 24px;
+    }
+  }
+
+  &--name {
+    gap: 22px;
+
+    @media (min-width: $tablet-width) {
+      gap: 24px;
     }
   }
 }
@@ -132,7 +196,7 @@
 }
 
 .form-order__info {
-  margin: 0;
+  margin: -9px 0 0 0;
   font-size: 14px;
   line-height: 16px;
 
@@ -140,6 +204,9 @@
     grid-area: f-info;
     justify-self: right;
     align-self: center;
+    font-size: 17px;
+    line-height: 30px;
+    padding-top: 12px;
   }
 }
 
@@ -149,5 +216,10 @@
     width: auto;
     justify-self: left;
     padding: 0 30px;
+    margin-top: 3px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
   }
 }

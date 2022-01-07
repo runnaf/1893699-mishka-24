@@ -10,12 +10,12 @@
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
-    padding: 60px 50px;
+    padding: 47px 50px;
     justify-content: space-between;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 55px 0 60px;
+    padding: 48px 0 60px;
     margin: 0 auto;
     max-width: $desktop-page-width;
   }
@@ -71,6 +71,10 @@
     padding: 0;
     justify-self: center;
     align-self: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 30px;
   }
 
   &:focus .page-footer__copyright-icon {

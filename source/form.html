@@ -19,6 +19,10 @@
   <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
   <link rel="manifest" href="manifest.json">
+  <link rel="preload" href="fonts/opensans.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/opensansbold.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2" crossorigin>
   <title>Вязание на заказ в интернет-магазине "Мишка"</title>
 </head>
 <body>
@@ -85,7 +89,7 @@
       <fieldset class="form-order__filter-group">
         <div class="form-order__wrapper">
           <div class="form-order__legend-wrapper">
-            <legend class="form-order__filter-title">Тип</legend>
+            <legend class="form-order__filter-title form-order__filter-title--radio">Тип</legend>
           </div>
           <ul class="form-order__filter-list">
             <li class="form-order__filter-item">
@@ -97,7 +101,7 @@
             </li>
             <li class="form-order__filter-item">
               <label class="control">
-                <input class="visually-hidden control__input" type="radio" name="product-type" value="no">
+                <input class="visually-hidden control__input" type="radio" name="product-type" value="no" disabled>
                 <span class="control__mark"></span>
                 <span class="control__label">Детская игрушка</span>
               </label>
@@ -107,9 +111,9 @@
       </fieldset>
 
       <fieldset class="form-order__filter-group form-order__filter-group--grey">
-        <div class="form-order__wrapper">
+        <div class="form-order__wrapper form-order__wrapper--checkbox">
           <div class="form-order__legend-wrapper">
-            <legend class="form-order__filter-title">Цвет</legend>
+            <legend class="form-order__filter-title form-order__filter-title--checkbox">Цвет</legend>
           </div>
           <ul class="form-order__filter-list form-order__filter-list--checkbox">
             <li class="form-order__filter-item">
@@ -128,7 +132,7 @@
             </li>
             <li class="form-order__filter-item">
               <label class="control">
-                <input class="visually-hidden control__input" type="checkbox" name="color-tiffany">
+                <input class="visually-hidden control__input" type="checkbox" name="color-tiffany" disabled>
                 <span class="control__mark"></span>
                 <span class="control__label">Тиффани</span>
               </label>
@@ -161,9 +165,9 @@
       <fieldset class="form-order__filter-group filter-id">
         <div class="form-order__wrapper">
           <div class="form-order__legend-wrapper">
-            <legend class="form-order__filter-title">ФИО</legend>
+            <legend class="form-order__filter-title form-order__filter-title--name">ФИО</legend>
           </div>
-          <ul class="form-order__filter-list">
+          <ul class="form-order__filter-list form-order__filter-list--name">
             <li class="form-order__filter-item">
               <label class="filter-id__label">
                 <span class="filter-id__text">Имя:</span>
@@ -189,7 +193,7 @@
       <fieldset class="form-order__filter-group filter-contact form-order__filter-group--grey">
         <div class="form-order__wrapper form-order__wrapper--tel">
           <div class="form-order__legend-wrapper">
-            <legend class="form-order__filter-title filter-contact__title">ТЕЛ</legend>
+            <legend class="form-order__filter-title form-order__filter-title--tel">ТЕЛ</legend>
           </div>
           <label class="filter-contact__label filter-contact__label--tel">
             <input class="filter-contact__input" type="tel" name="user-tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
@@ -200,7 +204,7 @@
       <fieldset class="form-order__filter-group filter-contact form-order__filter-group--grey">
         <div class="form-order__wrapper form-order__wrapper--email">
           <div class="form-order__legend-wrapper">
-            <legend class="form-order__filter-title filter-contact__title">E-mail</legend>
+            <legend class="form-order__filter-title form-order__filter-title--email">E-mail</legend>
           </div>
           <label class="filter-contact__label filter-contact__label--email">
             <input class="filter-contact__input" type="email" name="user-email" placeholder="Ваш Email*" required>
@@ -211,7 +215,7 @@
       <fieldset class="form-order__filter-group filter-additional">
         <div class="form-order__wrapper">
           <div class="form-order__legend-wrapper">
-            <legend class="form-order__filter-title">ДОП</legend>
+            <legend class="form-order__filter-title form-order__filter-title--add">ДОП</legend>
           </div>
           <label class="filter-additional__label">
             <textarea class="filter-additional__input" name="additional" placeholder="Опишите все ваши пожелания к заказу"></textarea>
@@ -228,8 +232,8 @@
 <footer class="page-footer">
   <div class="page-footer__wrapper">
     <a class="page-footer__logo" href="index.html">
-      <svg class="page-footer__icon" width="86" height="35" viewBox="0 0 86 35">
-        <use xlink:href="img/sprite.svg#mishka-logo-mobile"></use>
+      <svg class="page-footer__icon" width="102" height="34" viewBox="0 0 102 34">
+        <use xlink:href="img/sprite.svg#mishka-logo-footer"></use>
       </svg>
     </a>
     <div class="page-footer__social social">

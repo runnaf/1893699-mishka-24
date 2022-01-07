@@ -1,7 +1,7 @@
 .catalog__wrapper {
   display: grid;
   padding: 0 30px;
-  row-gap: 30px;
+  row-gap: 32px;
 
   @media (min-width: $tablet-width) {
     padding: 0 50px;

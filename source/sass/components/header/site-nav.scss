@@ -2,7 +2,7 @@
   @media (min-width: $tablet-width) {
     grid-area: site-nav;
     align-self: center;
-    justify-self: start;
+    justify-self: flex-start;
   }
 
   @media (min-width: $desktop-width) {
@@ -23,18 +23,20 @@
 
 .site-nav__item {
   position: relative;
-  min-height: 80px;
+  min-height: 79px;
   display: flex;
-  justify-content: start;
-  margin-left: 80px;
+  justify-content: flex-start;
+  margin-left: 76px;
   align-items: center;
 
   @media (min-width: $tablet-width) {
     margin-left: 0;
+    min-height: 46px;
+    padding: 21px 0 0 0;
   }
 
   @media (min-width: $desktop-width) {
-    padding-right: 35px;
+    padding: 0 35px 0 0;
   }
 
   &:nth-child(even) {
@@ -70,7 +72,7 @@
     font-size: 15px;
     line-height: 24px;
     font-weight: 700;
-    margin-right: 20px;
+    margin-right: 37px;
     z-index: 3;
   }
 
