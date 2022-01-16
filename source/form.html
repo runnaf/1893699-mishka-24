@@ -19,6 +19,7 @@
   <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
   <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="favicon.ico">
   <link rel="preload" href="fonts/opensans.woff" as="font" type="font/woff" crossorigin="anonymous">
   <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/opensansbold.woff" as="font" type="font/woff" crossorigin="anonymous">
@@ -27,8 +28,9 @@
 </head>
 <body>
 <header class="page-header">
-  <div class="page-header__wrapper">
+  <div class="page-header__wrapper page-header__wrapper--nojs">
     <a href="index.html" class="page-header__logo">
+      <span class="visually-hidden">Перейти на главную страницу</span>
       <picture class="page-header__picture">
         <source media="(min-width: 1150px)" srcset="img/mishka-logo-desktop.svg">
         <source media="(min-width: 768px)" srcset="img/mishka-logo-tablet.svg">
@@ -87,9 +89,10 @@
     </div>
     <form class="order__form form-order" action="https://echo.htmlacademy.ru/" method="get">
       <fieldset class="form-order__filter-group">
+        <legend class="visually-hidden">Тип</legend>
         <div class="form-order__wrapper">
           <div class="form-order__legend-wrapper">
-            <legend class="form-order__filter-title form-order__filter-title--radio">Тип</legend>
+            <span class="form-order__filter-title form-order__filter-title--radio">Тип</span>
           </div>
           <ul class="form-order__filter-list">
             <li class="form-order__filter-item">
@@ -111,9 +114,10 @@
       </fieldset>
 
       <fieldset class="form-order__filter-group form-order__filter-group--grey">
+        <legend class="visually-hidden">Цвет</legend>
         <div class="form-order__wrapper form-order__wrapper--checkbox">
           <div class="form-order__legend-wrapper">
-            <legend class="form-order__filter-title form-order__filter-title--checkbox">Цвет</legend>
+            <span class="form-order__filter-title form-order__filter-title--checkbox">Цвет</span>
           </div>
           <ul class="form-order__filter-list form-order__filter-list--checkbox">
             <li class="form-order__filter-item">
@@ -163,9 +167,10 @@
       </fieldset>
 
       <fieldset class="form-order__filter-group filter-id">
+        <legend class="visually-hidden">ФИО</legend>
         <div class="form-order__wrapper">
           <div class="form-order__legend-wrapper">
-            <legend class="form-order__filter-title form-order__filter-title--name">ФИО</legend>
+            <span class="form-order__filter-title form-order__filter-title--name">ФИО</span>
           </div>
           <ul class="form-order__filter-list form-order__filter-list--name">
             <li class="form-order__filter-item">
@@ -191,33 +196,39 @@
       </fieldset>
 
       <fieldset class="form-order__filter-group filter-contact form-order__filter-group--grey">
+        <legend class="visually-hidden">ТЕЛ</legend>
         <div class="form-order__wrapper form-order__wrapper--tel">
           <div class="form-order__legend-wrapper">
-            <legend class="form-order__filter-title form-order__filter-title--tel">ТЕЛ</legend>
+            <span class="form-order__filter-title form-order__filter-title--tel">ТЕЛ</span>
           </div>
           <label class="filter-contact__label filter-contact__label--tel">
+            <span class="visually-hidden">Контактный телефон</span>
             <input class="filter-contact__input" type="tel" name="user-tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
           </label>
         </div>
       </fieldset>
 
       <fieldset class="form-order__filter-group filter-contact form-order__filter-group--grey">
+        <legend class="visually-hidden">E-mail</legend>
         <div class="form-order__wrapper form-order__wrapper--email">
           <div class="form-order__legend-wrapper">
-            <legend class="form-order__filter-title form-order__filter-title--email">E-mail</legend>
+            <span class="form-order__filter-title form-order__filter-title--email">E-mail</span>
           </div>
           <label class="filter-contact__label filter-contact__label--email">
+            <span class="visually-hidden">Электронная почта</span>
             <input class="filter-contact__input" type="email" name="user-email" placeholder="Ваш Email*" required>
           </label>
         </div>
       </fieldset>
 
       <fieldset class="form-order__filter-group filter-additional">
+        <legend class="visually-hidden">ДОП</legend>
         <div class="form-order__wrapper">
           <div class="form-order__legend-wrapper">
-            <legend class="form-order__filter-title form-order__filter-title--add">ДОП</legend>
+            <span class="form-order__filter-title form-order__filter-title--add">ДОП</span>
           </div>
           <label class="filter-additional__label">
+            <span class="visually-hidden">Дополнительные пожелания</span>
             <textarea class="filter-additional__input" name="additional" placeholder="Опишите все ваши пожелания к заказу"></textarea>
           </label>
         </div>
@@ -232,6 +243,7 @@
 <footer class="page-footer">
   <div class="page-footer__wrapper">
     <a class="page-footer__logo" href="index.html">
+      <span class="visually-hidden">Перейти на главную страницу</span>
       <svg class="page-footer__icon" width="102" height="34" viewBox="0 0 102 34">
         <use xlink:href="img/sprite.svg#mishka-logo-footer"></use>
       </svg>
@@ -264,7 +276,7 @@
         </li>
       </ul>
     </div>
-    <a class="page-footer__copyright" href="https://htmlacademy.ru/">
+    <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
       <p class="page-footer__copyright-text">Разработано</p>
       <svg class="page-footer__copyright-icon" width="27" height="35" viewBox="0 0 27 35">
         <use xlink:href="img/sprite.svg#htmlacademy-logo"></use>

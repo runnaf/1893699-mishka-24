@@ -1,11 +1,13 @@
 var navSite = document.querySelector('.site-nav');
 var navUser = document.querySelector('.user-nav');
 var navToggle = document.querySelector('.page-header__toggle');
+var navWrapper = document.querySelector('.page-header__wrapper')
 
 
 navSite.classList.remove('page-header__nav--nojs');
 navUser.classList.remove('page-header__nav--nojs');
 navToggle.classList.remove('page-header__toggle--nojs');
+navWrapper.classList.remove('page-header__wrapper--nojs');
 
 navSite.classList.add('page-header__nav--closed');
 navUser.classList.add('page-header__nav--closed');

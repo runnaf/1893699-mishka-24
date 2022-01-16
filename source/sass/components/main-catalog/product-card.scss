@@ -96,7 +96,8 @@
     padding: 0;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: 0.6;
   }
 
@@ -164,4 +165,9 @@
   border: none;
   outline: none;
   padding: 0 0 2px 0;
+
+  &:focus .product-card__icon {
+    fill: $main-green;
+    opacity: 1;
+  }
 }

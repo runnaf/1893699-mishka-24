@@ -41,7 +41,7 @@
     height: 1px;
     background-color: $border-color;
 
-    @media (min-width: $tablet-width) {
+    @media (min-width: $mobile-width-only) {
       display: none;
     }
   }
