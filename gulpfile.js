@@ -76,6 +76,12 @@ const svg = () => {
     .pipe(gulp.dest('build/img'));
 }
 
+const svgFavicon = () => {
+  return gulp.src(['source/img/favicon/*.svg'])
+    .pipe(svgo())
+    .pipe(gulp.dest('build/img/favicon'));
+}
+
 const sprite = () => {
   return gulp.src('source/img/icons/*.svg')
     .pipe(svgo())
@@ -146,6 +152,7 @@ export const build = gulp.series(
     html,
     script,
     svg,
+    svgFavicon,
     sprite,
     createWebp
   ));
@@ -161,6 +168,7 @@ export default gulp.series(
     html,
     script,
     svg,
+    svgFavicon,
     sprite,
     createWebp
   ),

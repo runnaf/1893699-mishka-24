@@ -1,4 +1,4 @@
-.modal__container {
+.modal {
   position: fixed;
   z-index: 20;
   top: 0;
@@ -12,7 +12,7 @@
   }
 }
 
-.modal {
+.modal__wrapper {
   z-index: 21;
   position: absolute;
   display: flex;

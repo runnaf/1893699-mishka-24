@@ -165,6 +165,8 @@
 }
 
 .review__create-new {
+  text-decoration: none;
+
   @media (min-width: $tablet-width) {
     grid-area: r-new;
     margin-left: -10px;

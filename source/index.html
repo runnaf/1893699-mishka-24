@@ -19,6 +19,7 @@
   <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
   <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="favicon.ico">
   <link rel="preload" href="fonts/opensans.woff" as="font" type="font/woff" crossorigin="anonymous">
   <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/opensansbold.woff" as="font" type="font/woff" crossorigin="anonymous">
@@ -27,8 +28,9 @@
 </head>
 <body>
 <header class="page-header">
-  <div class="page-header__wrapper">
+  <div class="page-header__wrapper page-header__wrapper--nojs">
     <a href="index.html" class="page-header__logo">
+      <span class="visually-hidden">Перейти на главную страницу</span>
       <picture class="page-header__picture">
         <source media="(min-width: 1150px)" srcset="img/mishka-logo-desktop.svg">
         <source media="(min-width: 768px)" srcset="img/mishka-logo-tablet.svg">
@@ -200,9 +202,9 @@
           <span class="visually-hidden">Следующий отзыв</span>
         </button>
       </div>
-      <button class="review__create-new button" type="button">
+      <a class="review__create-new button" href="review.html">
         Написать
-      </button>
+      </a>
     </div>
   </section>
   <section class="contacts main__contacts">
@@ -214,15 +216,19 @@
         <p class="contacts__text contacts__text--tablet">адрес:</p>
         <p class="contacts__text">г. Санкт-Петербург<br>ул. Большая Конюшенная<br>д. 19/8, офис 101</p>
       </address>
-      <iframe class="contacts__map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003015!2d30.320858715991513!3d59.93871916905433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1639593212867!5m2!1sru!2sru" width="320" height="455" allowfullscreen="" loading="lazy" title="Как нас найти"></iframe>
-      <button class="contacts__feedback button" type="button">Напишите нам</button>
+      <div class="contacts__map">
+        <div class="contacts__pin"></div>
+        <iframe class="contacts__iframe"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003015!2d30.320858715991513!3d59.93871916905433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1639593212867!5m2!1sru!2sru" width="320" height="455" loading="lazy" title="Как нас найти"></iframe>
+      </div>
+      <a class="contacts__feedback button" href="send-message.html">Напишите нам</a>
     </div>
   </section>
 </main>
 <footer class="page-footer">
   <div class="page-footer__wrapper">
     <a class="page-footer__logo" href="index.html">
+      <span class="visually-hidden">Перейти на главную страницу</span>
       <svg class="page-footer__icon" width="102" height="34" viewBox="0 0 102 34">
         <use xlink:href="img/sprite.svg#mishka-logo-footer"></use>
       </svg>
@@ -255,7 +261,7 @@
         </li>
       </ul>
     </div>
-    <a class="page-footer__copyright" href="https://htmlacademy.ru/">
+    <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
       <p class="page-footer__copyright-text">Разработано</p>
       <svg class="page-footer__copyright-icon" width="27" height="35" viewBox="0 0 27 35">
         <use xlink:href="img/sprite.svg#htmlacademy-logo"></use>
@@ -264,8 +270,8 @@
   </div>
 </footer>
 
-<div class="modal__container modal__container--close">
-  <div class="modal">
+<div class="modal modal--close">
+  <div class="modal__wrapper">
     <h2 class="modal__title">Добавить&nbsp;<br class="modal__title--break">в корзину</h2>
     <p class="modal__content">Выберите размер:</p>
     <form class="modal__form" action="https://echo.htmlacademy.ru/">

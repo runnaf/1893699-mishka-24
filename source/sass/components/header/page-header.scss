@@ -6,7 +6,7 @@
   &::before {
     content: "";
     position: absolute;
-    bottom: 0;
+    top: 79px;
     left: 0;
     right: 0;
     height: 1px;
@@ -14,6 +14,7 @@
 
     @media (min-width: $tablet-width) {
       bottom: 46px;
+      top: auto;
     }
   }
 }
@@ -47,6 +48,10 @@
     grid-template-areas:
       "site-nav header-logo user-nav"
       "sale-info . delivery-info";
+  }
+
+  &--nojs {
+    position: relative;
   }
 }
 
@@ -91,11 +96,25 @@
     }
   }
 
+  @media (width: $mobile-width-only) {
+    &--closed .site-nav__list {
+      display: none;
+    }
+
+    &--closed .user-nav__list {
+      display: none;
+    }
+  }
+
   &--open.user-nav {
     position: relative;
     height: auto;
     z-index: 10;
     background-color: $main-background;
+
+    @media (min-width: $tablet-width) {
+      background-color: inherit;
+    }
   }
 
   &--open.site-nav {
@@ -103,6 +122,10 @@
     height: auto;
     z-index: 10;
     background-color: $main-background;
+
+    @media (min-width: $tablet-width) {
+      background-color: inherit;
+    }
   }
 
   &--nojs {
